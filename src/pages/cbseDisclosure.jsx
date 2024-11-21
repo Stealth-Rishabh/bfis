@@ -87,7 +87,7 @@ const mainMenu = [
     ],
   },
   {
-    label: "D. Staff (teaching)",
+    label: "D. Staff (Teaching)",
     submenu: [
       {
         label: "Staff Details",
