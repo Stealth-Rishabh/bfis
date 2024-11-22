@@ -49,7 +49,7 @@ const FullScreenSection = ({ sections }) => {
           style={{ opacity: opacityBefore, zIndex: 20 }}
         >
           <h1 className="text-dblue text-4xl md:text-6xl font-bold text-center max-w-screen-xl">
-            Welcome to BFIS - Best School in North India
+            Shaping Young Minds for a Brighter Tomorrow
           </h1>
         </motion.div>
       </div>
@@ -85,7 +85,7 @@ const FullScreenSection = ({ sections }) => {
           style={{ opacity: opacityAfter, zIndex: 20 }}
         >
           <h1 className="text-dblue text-4xl md:text-6xl font-bold text-center max-w-screen-xl">
-            Thank You for Visiting BFIS
+            Continuing the Legacy of Academic Excellence
           </h1>
         </motion.div>
       </div>

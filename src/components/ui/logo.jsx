@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import logo from "@/assets/images/logo.webp";
+import logo from "@/assets/images/logo_w.png";
 
 const Logo = ({ className }) => {
   return (
