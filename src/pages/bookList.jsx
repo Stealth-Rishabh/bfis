@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 import WordPullUp from "@/components/ui/word-pull-up";
 import { Download } from "lucide-react";
 
-// Uniform Data
-const uniforms = [
+const books = [
   {
     label: "Pre Primary",
     url: "https://www.bfis.in/wp-content/uploads/2024/04/Pre-Primary-Session-2024-25.pdf", // Example URL
@@ -36,12 +35,12 @@ export default function BookList() {
         animate="visible"
       >
         <WordPullUp
-          words="Uniform" // Page heading
+          words="Books" // Page heading
           className="text-4xl font-bold text-[#2196F3] mb-6 text-center"
         />
 
         <div className="space-y-4">
-          {uniforms.map((item, index) => (
+          {books.map((item, index) => (
             <a
               key={index}
               href={item.url}
