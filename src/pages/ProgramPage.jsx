@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import Arts from "../assets/images/Arts.jpg";
-import Sciences from "../assets/images/sciences.jpg";
+import Sciences from "../assets/images/Sciences.jpg";
 import Maths from "../assets/images/Maths.jpg";
 import Robotics from "../assets/images/Robotics.jpg";
 import LanguageStudies from "../assets/images/language_studies.jpg";
