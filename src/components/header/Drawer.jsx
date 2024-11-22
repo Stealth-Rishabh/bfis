@@ -16,6 +16,7 @@ const Drawer = () => {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Academics", path: "/academics" },
+    { name: "Programs", path: "/programs" },
     { name: "Admissions", path: "/admission" },
     { name: "Infrastructure", path: "/infrastructure" },
     { name: "Events", path: "/events" },

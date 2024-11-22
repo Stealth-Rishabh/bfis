@@ -89,18 +89,27 @@ export default function PoliciesPage() {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            justify-content: flex-start; /* Default to top alignment */
+            align-items: center; /* Center alignment on mobile */
             padding: 1.5rem;
             border-radius: 0.5rem;
             min-height: 250px;
+            text-align: center; /* Center text on mobile */
+          }
+          @media (min-width: 768px) {
+            /* Apply top alignment for larger screens */
+            .policy-card {
+              align-items: flex-start;
+              text-align: left;
+            }
           }
           .policy-card:hover {
             transform: scale(1.05) !important;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
           }
           .icon {
-            width: 2rem;
-            height: 2rem;
+            width: 3rem;
+            height: 3rem;
             margin-bottom: 1rem;
             color: white;
           }

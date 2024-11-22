@@ -106,7 +106,7 @@ function Section({ section, index }) {
               } // Fade-in for "Pre-Primary" and "Primary", slide-in for others
               animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className={`overflow-hidden rounded shadow-2xl h-60 w-full ${
+              className={`max-w-screen-xl overflow-hidden rounded shadow-2xl h-60 w-full ${
                 index < 2 ? "md:sticky top-8" : ""
               }`}
             >
@@ -123,7 +123,7 @@ function Section({ section, index }) {
               }
               animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className="space-y-4"
+              className="space-y-4 overflow-hidden"
             >
               <h2 className="text-4xl font-bold text-indigo-900">
                 {section.title}
@@ -156,7 +156,7 @@ function Section({ section, index }) {
               }
               animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className="space-y-4"
+              className="space-y-4 overflow-hidden"
             >
               <h2 className="text-4xl font-bold text-indigo-900">
                 {section.title}
@@ -202,7 +202,7 @@ function Section({ section, index }) {
 
       {/* Mobile Layout */}
       <motion.div
-        className="md:hidden flex flex-col gap-4 items-start"
+        className="overflow-hidden md:hidden flex flex-col gap-4 items-start"
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -241,7 +241,7 @@ function Section({ section, index }) {
           }
           animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="space-y-4"
+          className="space-y-4 overflow-hidden"
         >
           <p className="text-lg text-gray-700">{section.description}</p>
           {section.highlights && (
@@ -288,7 +288,7 @@ export default function Academics() {
           <div className="text-center z-10">
             <WordPullUp
               words="Academic Excellence at BFIS"
-              className="text-6xl font-bold text-indigo-900 mb-4"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold text-indigo-900 mb-4"
             />
             <WordFadeIn
               words="Discover our comprehensive programs for academic and personal growth."

@@ -101,6 +101,14 @@ const Footer = () => {
                   Policies
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="https://www.bfis.in/wp-content/uploads/2024/04/Fee-Structure-Session-2024-25.pdf"
+                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
+                >
+                  Fee Structure
+                </Link>
+              </li>
             </ul>
           </SlideUp>
 

@@ -70,7 +70,7 @@ function Admission() {
         >
           <WordPullUp
             words="Start Your Journey Here"
-            className="text-5xl font-bold text-blue-900 mb-4"
+            className="text-3xl md:text-5xl font-bold text-blue-900 mb-4"
           />
           <p className="text-lg text-gray-700">
             Apply now for exciting programs and shape your future in education.

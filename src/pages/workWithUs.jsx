@@ -62,14 +62,14 @@ export default function WorkWithUs() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#26A69A]/5 to-[#9C27B0]/5 flex items-center justify-center p-8">
-      <div className="max-w-6xl w-full bg-white/80 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#26A69A]/5 to-[#9C27B0]/5 flex items-center justify-center md:p-8">
+      <div className="max-w-6xl w-full bg-white/80 backdrop-blur-md md:rounded-3xl shadow-2xl overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Left Section */}
-          <div className="p-12 space-y-8">
+          <div className="p-6 md:p-12 space-y-8">
             {/* Animated Heading */}
             <motion.h1
-              className="text-4xl md:text-5xl font-extrabold text-[#2196F3] leading-tight"
+              className="text-3xl md:text-5xl font-bold md:font-extrabold text-[#2196F3] leading-tight"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -125,7 +125,7 @@ export default function WorkWithUs() {
             </div>
             {/* Button */}
             <motion.button
-              className="bg-[#2196F3] hover:bg-[#1E88E5] text-white px-8 py-4 text-lg rounded-full transition-transform duration-300"
+              className="bg-[#2196F3] hover:bg-[#1E88E5] text-white px-4 md:px-8 py-4 md:py-4 text-sm md:text-lg rounded-full transition-transform duration-300"
               onClick={() => navigate("/contact-us")}
               variants={buttonVariants}
               whileHover="hover"
