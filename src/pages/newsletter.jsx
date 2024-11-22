@@ -170,16 +170,84 @@ const mainMenu = [
         url: "https://www.bfis.in/wp-content/uploads/2023/12/BFIS-JR.-NEWLETTER-SEPTEMBER-2023_compressed.pdf",
       },
       {
-        label: "October 2022",
-        url: "https://www.bfis.in/wp-content/uploads/2022/11/15-BFIS-NEWLETTER-OCTOBER-2022.pdf",
+        label: "October 2023(SR)",
+        url: "https://www.bfis.in/wp-content/uploads/2023/12/BFIS-SR.-NEWLETTER-OCTOBER-2023_compressed.pdf",
       },
       {
-        label: "November 2022",
-        url: "https://www.bfis.in/wp-content/uploads/2022/12/16-BFIS-NEWLETTER-NOVEMBER-2022.pdf",
+        label: "October 2023(JR)",
+        url: "https://www.bfis.in/wp-content/uploads/2023/12/BFIS-JR.-NEWLETTER-OCTOBER-2023_compressed.pdf",
       },
       {
-        label: "December 2022",
-        url: "https://www.bfis.in/wp-content/uploads/2023/01/17-BFIS-NEWSLETTER-DECEMBER-2022.pdf",
+        label: "November 2023(SR)",
+        url: "https://www.bfis.in/wp-content/uploads/2023/12/BFIS-SR.-NEWLETTER-NOVEMBER-2023_compressed.pdf",
+      },
+      {
+        label: "November 2023(JR)",
+        url: "https://www.bfis.in/wp-content/uploads/2023/12/BFIS-JR.-NEWLETTER-NOVEMBER-2023_compressed.pdf",
+      },
+      {
+        label: "December 2023(SR)",
+        url: "https://www.bfis.in/wp-content/uploads/2024/02/BFIS-SR.-NEWLETTER-DECEMBER-2023.pdf",
+      },
+      {
+        label: "December 2023(JR)",
+        url: "https://www.bfis.in/wp-content/uploads/2024/02/BFIS-JR.-NEWLETTER-DECEMBER-2023-1.pdf",
+      },
+    ],
+  },
+
+  {
+    label: "E-Newsletter 2024",
+    submenu: [
+      {
+        label: "January 2024",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20NEWLETTER%20JAN%202024.pdf",
+      },
+      {
+        label: "February 2024",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20NEWLETTER%20FEB%202024.pdf",
+      },
+
+      {
+        label: "March 2024",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20NEWLETTER%20MARCH%202024.pdf",
+      },
+
+      {
+        label: "April 2024 (SR)",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20SR.%20NEWSLETTER/BFIS%20SR.%20NEWSLETTER%20APRIL%202024.pdf",
+      },
+      {
+        label: "April 2024 (JR)",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20JR.%20NEWSLETTER/BFIS%20JR.%20NEWSLETTER%20APRIL%202024.pdf",
+      },
+      {
+        label: "May 2024(SR)",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20SR.%20NEWSLETTER/BFIS%20SR.NEWLETTER%20MAY%202024.pdf",
+      },
+      {
+        label: "May 2024(JR)",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20JR.%20NEWSLETTER/BFIS%20JR.NEWLETTER%20MAY%202024.pdf",
+      },
+      {
+        label: "June 2024",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20NEWLETTER%20JUN%202024.pdf",
+      },
+      {
+        label: "July 2024(SR)",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20SR.%20NEWSLETTER/BFIS%20SR.NEWSLETTER%20JULY%202024.pdf",
+      },
+      {
+        label: "July 2024(JR)",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20JR.%20NEWSLETTER/BFIS%20JR.NEWSLETTER%20JULY%202024.pdf",
+      },
+      {
+        label: "August 2024(SR)",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20SR.%20NEWSLETTER/BFIS%20SR.NEWLETTER%20AUGUST%202024.pdf",
+      },
+      {
+        label: "August 2024(JR)",
+        url: "https://www.bfis.in/wp-content/themes/bfis-theme/pdf/BFIS%20JR.%20NEWSLETTER/BFIS%20JR.NEWSLETTER%20AUGUST%202024.pdf",
       },
     ],
   },
