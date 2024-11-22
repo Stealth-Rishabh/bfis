@@ -40,7 +40,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="min-h-screen text-gray-800 py-24 px-6">
+    <div className="min-h-screen text-gray-800 py-24 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <motion.div
