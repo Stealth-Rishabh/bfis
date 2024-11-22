@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+"use client";
+
 import { useState, useEffect } from "react";
 import Marquee from "../components/ui/marquee";
 import gallery1 from "../assets/images/jpg/gallery1.jpg";
@@ -45,23 +47,26 @@ const images = [
   gallery20,
 ];
 
-// Split images into columns
-const firstColumn = images.slice(0, images.length / 3);
-const secondColumn = images.slice(images.length / 3, (2 * images.length) / 3);
-const thirdColumn = images.slice((2 * images.length) / 3);
+// Split images into three columns
+const firstColumn = images.slice(0, Math.ceil(images.length / 3));
+const secondColumn = images.slice(
+  Math.ceil(images.length / 3),
+  Math.ceil((2 * images.length) / 3)
+);
+const thirdColumn = images.slice(Math.ceil((2 * images.length) / 3));
 
-const ImageCard = ({ src, onClick }) => {
-  return (
-    <div className="relative w-full max-w-xs cursor-pointer overflow-hidden rounded-xl border mb-4 lg:max-w-md">
-      <img
-        src={src}
-        alt="Infrastructure"
-        className="w-full h-auto rounded-xl hover:opacity-80 transition-opacity"
-        onClick={onClick}
-      />
-    </div>
-  );
-};
+const ImageCard = ({ src, onClick }) => (
+  <div
+    className="relative w-full cursor-pointer overflow-hidden rounded-lg"
+    onClick={onClick}
+  >
+    <img
+      src={src}
+      alt="Infrastructure"
+      className="w-full h-auto object-cover text-dblue  text-3xl md:text-5xl transition-transform duration-300 hover:scale-105"
+    />
+  </div>
+);
 
 export default function Infrastructure() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -86,7 +91,6 @@ export default function Infrastructure() {
     );
   };
 
-  // Close the lightbox on pressing the "Esc" key
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") closeLightbox();
@@ -98,20 +102,17 @@ export default function Infrastructure() {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center h-[100vh] w-full overflow-hidden rounded-lg border bg-background md:shadow-xl">
-      <h2 className="text-2xl font-bold my-4">Infrastructure</h2>
+    <div className="relative flex flex-col items-center h-screen w-full overflow-hidden rounded-lg">
+      <h2 className="text-3xl font-bold my-4">Infrastructure</h2>
 
       <div className="flex w-full justify-around gap-4 h-full">
-        {/* Render two columns on mobile, three on larger screens */}
+        {/* Column 1 */}
         <Marquee
           vertical
           pauseOnHover
-          className="[--duration:45s] h-full flex flex-col gap-4"
+          className="h-full flex flex-col gap-4 [--duration:45s]"
         >
-          {(window.innerWidth < 768
-            ? firstColumn.concat(secondColumn)
-            : firstColumn
-          ).map((src, index) => (
+          {firstColumn.map((src, index) => (
             <ImageCard
               key={index}
               src={src}
@@ -120,76 +121,66 @@ export default function Infrastructure() {
           ))}
         </Marquee>
 
+        {/* Column 2 */}
         <Marquee
           vertical
           reverse
           pauseOnHover
-          className="[--duration:50s] h-full flex flex-col gap-4"
+          className="h-full flex flex-col gap-4 [--duration:50s]"
         >
-          {(window.innerWidth < 768 ? thirdColumn : secondColumn).map(
-            (src, index) => (
-              <ImageCard
-                key={index}
-                src={src}
-                onClick={() => openLightbox(index)}
-              />
-            )
-          )}
+          {secondColumn.map((src, index) => (
+            <ImageCard
+              key={index}
+              src={src}
+              onClick={() => openLightbox(firstColumn.length + index)}
+            />
+          ))}
         </Marquee>
 
-        {window.innerWidth >= 768 && (
-          <Marquee
-            vertical
-            pauseOnHover
-            className="[--duration:55s] h-full flex flex-col gap-4"
-          >
-            {thirdColumn.map((src, index) => (
-              <ImageCard
-                key={index}
-                src={src}
-                onClick={() => openLightbox(index)}
-              />
-            ))}
-          </Marquee>
-        )}
+        {/* Column 3 */}
+        <Marquee
+          vertical
+          pauseOnHover
+          className="hidden lg:flex h-full flex-col gap-4 [--duration:55s]"
+        >
+          {thirdColumn.map((src, index) => (
+            <ImageCard
+              key={index}
+              src={src}
+              onClick={() =>
+                openLightbox(firstColumn.length + secondColumn.length + index)
+              }
+            />
+          ))}
+        </Marquee>
       </div>
-
-      {/* Gradient overlay for top and bottom with reduced opacity */}
-      <div className="pointer-events-none absolute top-0 h-1/4 w-full bg-gradient-to-b from-white/50 dark:from-background/50"></div>
-      <div className="pointer-events-none absolute bottom-0 h-1/4 w-full bg-gradient-to-t from-white/50 dark:from-background/50"></div>
 
       {/* Lightbox Modal */}
       {lightboxIndex !== null && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 transition-opacity">
-          <div className="relative p-4 bg-white rounded-lg shadow-lg max-w-4xl max-h-full overflow-auto">
-            <button
-              onClick={closeLightbox}
-              className="absolute top-2 right-2 text-gray-700 text-3xl font-bold hover:text-gray-900 cursor-pointer"
-            >
-              &times;
-            </button>
-            <img
-              src={images[lightboxIndex]}
-              alt="Infrastructure Large View"
-              className="w-full h-auto rounded-lg"
-            />
-            <div className="absolute inset-y-0 left-4 flex items-center">
-              <button
-                onClick={showPrevImage}
-                className="text-gray-700 text-3xl font-bold hover:text-gray-900 cursor-pointer"
-              >
-                &#10094;
-              </button>
-            </div>
-            <div className="absolute inset-y-0 right-4 flex items-center">
-              <button
-                onClick={showNextImage}
-                className="text-gray-700 text-3xl font-bold hover:text-gray-900 cursor-pointer"
-              >
-                &#10095;
-              </button>
-            </div>
-          </div>
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+          <button
+            className="absolute top-4 right-4 text-white text-3xl hover:text-gray-300"
+            onClick={closeLightbox}
+          >
+            &times;
+          </button>
+          <button
+            className="absolute left-4 text-white text-3xl hover:text-gray-300"
+            onClick={showPrevImage}
+          >
+            &#10094;
+          </button>
+          <img
+            src={images[lightboxIndex]}
+            alt={`Infrastructure ${lightboxIndex + 1}`}
+            className="max-w-full max-h-full rounded-lg"
+          />
+          <button
+            className="absolute right-4 text-white text-3xl hover:text-gray-300"
+            onClick={showNextImage}
+          >
+            &#10095;
+          </button>
         </div>
       )}
     </div>
