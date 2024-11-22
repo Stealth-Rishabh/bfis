@@ -12,7 +12,7 @@ import infrastructureImage from "../assets/images/infra.jpg";
 // Main Menu and Submenu Data
 const mainMenu = [
   {
-    label: "A. Appendix 11",
+    label: "Appendix 11",
     submenu: [
       {
         label: "Appendix 9",
@@ -21,7 +21,7 @@ const mainMenu = [
     ],
   },
   {
-    label: "B. Documents & Information",
+    label: "Documents & Information",
     submenu: [
       {
         label: "CBSE Affiliation Letter",
@@ -58,7 +58,7 @@ const mainMenu = [
     ],
   },
   {
-    label: "C. Results & Academics",
+    label: "Results & Academics",
     submenu: [
       {
         label: "Fee Structure",
@@ -87,7 +87,7 @@ const mainMenu = [
     ],
   },
   {
-    label: "D. Staff (Teaching)",
+    label: "Staff (Teaching)",
     submenu: [
       {
         label: "Staff Details",
@@ -97,7 +97,7 @@ const mainMenu = [
     ],
   },
   {
-    label: "E. School Infrastructure",
+    label: "School Infrastructure",
     submenu: [
       {
         label: "Infrastructure",
@@ -117,19 +117,22 @@ const cardVariants = {
 export default function CBSEDisclosure() {
   const [currentMenu, setCurrentMenu] = useState(mainMenu);
   const [previousMenu, setPreviousMenu] = useState(null);
+  const [currentHeading, setCurrentHeading] = useState("CBSE Disclosure");
   const [lightboxImages, setLightboxImages] = useState([]);
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
-  const handleMenuClick = (submenu) => {
+  const handleMenuClick = (submenu, label) => {
     if (submenu) {
       setPreviousMenu(currentMenu);
       setCurrentMenu(submenu);
+      setCurrentHeading(label); // Update the heading to the main menu item label
     }
   };
 
   const handleBackClick = () => {
     setCurrentMenu(previousMenu);
     setPreviousMenu(null);
+    setCurrentHeading("CBSE Disclosure"); // Reset the heading to the default title
   };
 
   const openLightbox = (images) => {
@@ -163,7 +166,7 @@ export default function CBSEDisclosure() {
         animate="visible"
       >
         <WordPullUp
-          words={previousMenu ? "Submenu" : "CBSE Disclosure"}
+          words={currentHeading} // Use the current heading state
           className="text-4xl font-bold text-[#2196F3] mb-6 text-center"
         />
 
@@ -173,7 +176,7 @@ export default function CBSEDisclosure() {
               key={index}
               className="w-full bg-[#4CAF50] hover:bg-[#388E3C] text-white py-4 rounded-lg transition-transform duration-150 hover:scale-105 flex items-center justify-between px-4"
               onClick={() => {
-                if (item.submenu) handleMenuClick(item.submenu);
+                if (item.submenu) handleMenuClick(item.submenu, item.label);
                 else if (item.type === "gallery") openLightbox(item.images);
                 else window.open(item.url, "_blank");
               }}

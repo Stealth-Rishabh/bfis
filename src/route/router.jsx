@@ -13,6 +13,7 @@ import ProgramPage from "../pages/ProgramPage";
 import PoliciesPage from "@/pages/policies";
 import WorkWithUs from "@/pages/workWithUs";
 import CBSEDisclosure from "@/pages/cbseDisclosure";
+import Newsletter from "@/pages/newsletter";
 // Component for handling dynamic subjects
 
 // About Section Pages with Layout and Sidebar
@@ -91,6 +92,11 @@ export const router = createBrowserRouter([
       {
         path: "/cbse-disclosure",
         element: <CBSEDisclosure />,
+      },
+
+      {
+        path: "/newsletter",
+        element: <Newsletter />,
       },
 
       {

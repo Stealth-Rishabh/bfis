@@ -3,7 +3,7 @@ import SocalIcons from "../ui/socalIcons";
 
 const TopHeader = () => {
   return (
-    <div id="top-header" className="bg-[#0d47a1] text-white sm:block hidden">
+    <div id="top-header" className="bg-vgreen text-white sm:block hidden">
       <div className="container mx-auto">
         <div className="flex lg:flex-row flex-col justify-between items-center gap-2 py-3">
           <div>

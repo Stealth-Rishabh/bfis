@@ -48,17 +48,17 @@ const Footer = () => {
           <SlideUp delay={3}>
             <div className="inline-block">
               <h3 className="text-2xl font-semibold text-white inline-block">
-                Pages
+                Quick Links
               </h3>
               <span className="block w-[130%] h-[1px] mt-2 bg-background relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-background after:h-1.5 after:w-1.5 after:rounded-full"></span>
             </div>
             <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5 min-w-[203px]">
               <li>
                 <Link
-                  to="/about-us"
+                  to="/newsletter"
                   className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
                 >
-                  About Us
+                  Newsletter
                 </Link>
               </li>
               <li>
