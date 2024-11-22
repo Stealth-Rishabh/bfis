@@ -14,6 +14,7 @@ import PoliciesPage from "@/pages/policies";
 import WorkWithUs from "@/pages/workWithUs";
 import CBSEDisclosure from "@/pages/cbseDisclosure";
 import Newsletter from "@/pages/newsletter";
+import Uniform from "@/pages/uniform";
 // Component for handling dynamic subjects
 
 // About Section Pages with Layout and Sidebar
@@ -97,6 +98,11 @@ export const router = createBrowserRouter([
       {
         path: "/newsletter",
         element: <Newsletter />,
+      },
+
+      {
+        path: "/uniform",
+        element: <Uniform />,
       },
 
       {

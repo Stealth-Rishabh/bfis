@@ -71,10 +71,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/blog"
+                  to="/uniform"
                   className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
                 >
-                  Latest Blog And News
+                  Uniform List
                 </Link>
               </li>
               <li>
