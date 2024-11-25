@@ -12,7 +12,7 @@ export default function PicLayout() {
   const isContentInView = useInView(contentRef, { triggerOnce: true });
 
   return (
-    <div className="flex justify-center items-center min-h-screen ">
+    <div className="flex justify-center items-center min-h-screen container max-w-[95vw]">
       <div className="bg-gradient-to-br from-vgreen to-hgreen p-12 flex flex-col md:flex-row items-center text-center md:text-left rounded-lg shadow-xl py-16 max-w-screen-xl">
         {/* Hero Image Section - Fade In */}
         <motion.div
@@ -35,7 +35,7 @@ export default function PicLayout() {
         >
           {/* Heading */}
           <motion.h2
-            className="text-4xl md:text-5xl font-bold font-roboto"
+            className="text-3xl md:text-5xl font-bold font-roboto"
             initial={{ opacity: 0, y: 20 }}
             animate={isContentInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}

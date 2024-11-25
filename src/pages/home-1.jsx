@@ -70,12 +70,13 @@ const HomeOne = () => {
       </Helmet>
       <div ref={ref} className="relative w-full">
         <HeroVideo />
+        <EducationalExperience />
+        <PicLayout />
         <SchoolSection />
         <StudentLife />
         <AchievementsSection />
         <FullscreenSections sections={sectionsData} />
-        <PicLayout />
-        <EducationalExperience />
+
         <GalleryTwo />
         <Gallery />
       </div>

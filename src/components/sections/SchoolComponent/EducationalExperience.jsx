@@ -34,7 +34,7 @@ export default function EducationalExperience() {
       {/* Heading with WordPullUp Animation */}
       <div className="text-center mb-8">
         <WordPullUp
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-dblue font-roboto mb-12"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-dblue font-roboto mb-12"
           words="Discover the Diverse Educational Experience at BFIS"
         />
       </div>

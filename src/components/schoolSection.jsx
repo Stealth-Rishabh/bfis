@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { Button } from "../components/ui/button";
 import WordPullUp from "../components/ui/word-pull-up";
 import { useNavigate } from "react-router-dom";
-import pre_primary_boy from "../assets/images/webp/pre_primary_boy.webp";
-import primary_boy from "../assets/images/webp/primary_boy.webp";
-import middle_boy from "../assets/images/webp/middle_boy.webp";
-import high_school_girl from "../assets/images/webp/high_school_girl.webp";
-import senior_boy from "../assets/images/webp/senior_boy.webp";
+import prePrimary from "@/assets/images/webp/pre-primary.webp";
+import primary from "@/assets/images/webp/primary.webp";
+import middle from "@/assets/images/webp/middle.webp";
+import highschool from "@/assets/images/webp/highschool.webp";
+import seniorSecondarySchool from "@/assets/images/webp/seniorSecondarySchool.webp";
 import smart from "../assets/images/jpg/gallery10.jpg";
 
 const sections = [
@@ -14,8 +13,7 @@ const sections = [
     id: "pre-primary",
     title: "PRE-PRIMARY",
     subtitle: "Ages 3-5",
-    color: "bg-[#FFB800]",
-    image: pre_primary_boy,
+    image: prePrimary,
     description:
       "Our pre-primary program focuses on early childhood development through play-based learning, fostering curiosity and social skills in a nurturing environment.",
   },
@@ -23,8 +21,7 @@ const sections = [
     id: "primary",
     title: "PRIMARY",
     subtitle: "Grades 1-5",
-    color: "bg-[#26A69A]",
-    image: primary_boy,
+    image: primary,
     description:
       "The primary section builds a strong foundation in core subjects while encouraging creativity and critical thinking through interactive and engaging lessons.",
   },
@@ -32,8 +29,7 @@ const sections = [
     id: "middle",
     title: "MIDDLE SCHOOL",
     subtitle: "Grades 6-8",
-    color: "bg-[#4CAF50]",
-    image: middle_boy,
+    image: middle,
     description:
       "Middle school prepares students for higher academic challenges, focusing on developing independent learning skills and exploring diverse subjects and extracurricular activities.",
   },
@@ -41,8 +37,7 @@ const sections = [
     id: "high-school",
     title: "HIGH SCHOOL",
     subtitle: "Grades 9-10",
-    color: "bg-[#2196F3]",
-    image: high_school_girl,
+    image: highschool,
     description:
       "Our high school program offers a comprehensive curriculum that prepares students for advanced studies, with a focus on academic excellence and personal growth.",
   },
@@ -50,8 +45,7 @@ const sections = [
     id: "senior-secondary",
     title: "SENIOR SECONDARY",
     subtitle: "Grades 11-12",
-    color: "bg-[#9C27B0]",
-    image: senior_boy,
+    image: seniorSecondarySchool,
     description:
       "The senior secondary program provides specialized streams and career guidance, equipping students with the knowledge and skills needed for higher education and future careers.",
   },
@@ -59,7 +53,6 @@ const sections = [
     id: "smart-classes",
     title: "SMART CLASSES",
     subtitle: "Pre-Nursery to Class 12th",
-    color: "bg-[#FF5722]",
     image: smart,
     description:
       "Our smart classes integrate cutting-edge technology across all grades, enhancing learning experiences with interactive digital content, virtual labs, and personalized learning tools.",
@@ -70,7 +63,7 @@ export default function SchoolSection() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full p-4 py-16 ">
+    <div className="w-full p-4 py-16">
       <WordPullUp
         words="Academics"
         className="text-dblue text-3xl md:text-5xl lg:text-6xl font-roboto font-bold text-center mb-4"
@@ -85,76 +78,43 @@ export default function SchoolSection() {
         Inspiring a Love of Learning from Pre-Primary to Senior Secondary
       </motion.h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
-        {sections.map((section, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {sections.map((section) => (
           <motion.div
             key={section.id}
-            className="perspective-1000 h-[400px] cursor-pointer group"
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{
-              duration: window.innerWidth < 768 ? 0.7 : 1.5,
-              delay: window.innerWidth < 768 ? 0 : index * 0.5,
-              ease: "easeOut",
-            }}
-            viewport={{ once: false, amount: 0.4 }}
+            className="relative flex flex-col items-center p-6 rounded-lg shadow-lg bg-white hover:shadow-xl transition-shadow"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <div className="relative w-full h-full flip-card">
-              <div
-                className={`absolute w-full h-full backface-hidden ${section.color} rounded-lg p-4 flex flex-col items-center justify-center text-white shadow-lg`}
-              >
-                <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-white">
-                  <img
-                    src={section.image}
-                    alt={section.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h2 className="text-xl font-bold text-center mb-2">
-                  {section.title}
-                </h2>
-                <p className="text-center text-sm">{section.subtitle}</p>
-              </div>
-
-              <div
-                className={`absolute w-full h-full backface-hidden ${section.color} rounded-lg p-4 flex flex-col items-center justify-center text-white flip-card-back shadow-lg`}
-              >
-                <p className="text-center text-sm mb-4">
-                  {section.description}
-                </p>
-                <Button
-                  variant="outline"
-                  className="bg-white text-black hover:bg-white/90 transition-colors duration-300"
-                  onClick={() => navigate(`/academics#${section.id}`)}
-                >
-                  Learn More
-                </Button>
-              </div>
+            {/* Image Section */}
+            <div className="w-full h-40 rounded-lg overflow-hidden mb-4">
+              <img
+                src={section.image}
+                alt={section.title}
+                className="w-full h-full object-cover"
+              />
             </div>
+
+            {/* Content Section */}
+            <h2 className="text-lg font-semibold text-dblue mb-2">
+              {section.title}
+            </h2>
+            <p className="text-sm text-gray-600 mb-4">{section.subtitle}</p>
+            <p className="text-gray-700 text-center text-sm">
+              {section.description}
+            </p>
+
+            {/* Button */}
+            <button
+              className="mt-4 px-4 py-2 text-sm font-medium text-white bg-dblue rounded hover:bg-hgreen transition-colors"
+              onClick={() => navigate(`/academics#${section.id}`)}
+            >
+              Learn More
+            </button>
           </motion.div>
         ))}
       </div>
-
-      <style>{`
-        .perspective-1000 {
-          perspective: 1000px;
-        }
-        .flip-card {
-          transform-style: preserve-3d;
-          transition: transform 0.7s;
-          position: relative;
-          transform: rotateY(0deg);
-        }
-        .group:hover .flip-card {
-          transform: rotateY(180deg);
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        .flip-card-back {
-          transform: rotateY(180deg);
-        }
-      `}</style>
     </div>
   );
 }
