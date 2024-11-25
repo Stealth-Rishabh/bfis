@@ -70,10 +70,10 @@ export default function SchoolSection() {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full p-4 py-16">
+    <div className="w-full p-4 py-16 ">
       <WordPullUp
         words="Academics"
-        className="text-dblue text-4xl sm:text-5xl md:text-6xl font-roboto font-bold text-center mb-4"
+        className="text-dblue text-3xl md:text-5xl lg:text-6xl font-roboto font-bold text-center mb-4"
       />
 
       <motion.h3

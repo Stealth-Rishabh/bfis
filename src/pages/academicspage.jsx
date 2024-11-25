@@ -156,8 +156,7 @@ function Section({ section, index }) {
                 </div>
               )}
               <Button
-                className="mt-4"
-                variant="outline"
+                className="mt-4 bg-dblue text-white hover:bg-lblue hover:text-white"
                 onClick={() => {
                   const target = document.getElementById(section.id);
                   if (target) {
@@ -201,8 +200,7 @@ function Section({ section, index }) {
                 </div>
               )}
               <Button
-                className="mt-4"
-                variant="outline"
+                className="mt-4 bg-dblue text-white hover:bg-lblue hover:text-white"
                 onClick={() => {
                   const target = document.getElementById(section.id);
                   if (target) {

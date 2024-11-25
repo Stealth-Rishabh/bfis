@@ -44,6 +44,7 @@ module.exports = {
       },
       colors: {
         dblue: "#003366",
+        lblue: "#194775",
         dteal: "#004d40",
         vgreen: "#43a047",
         hgreen: "#388e3c",

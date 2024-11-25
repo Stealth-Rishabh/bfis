@@ -7,6 +7,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import WordPullUp from "@/components/ui/word-pull-up";
+import WordFadeIn from "@/components/ui/word-fade-in";
 
 import gallery1 from "../assets/images/jpg/gallery1.jpg";
 import gallery2 from "../assets/images/jpg/gallery2.jpg";
@@ -28,11 +30,6 @@ import gallery17 from "../assets/images/jpg/gallery17.jpg";
 import gallery18 from "../assets/images/jpg/gallery18.jpg";
 import gallery19 from "../assets/images/jpg/gallery19.jpg";
 import gallery20 from "../assets/images/jpg/gallery20.jpg";
-
-const breadcrumbItems = [
-  { href: "/", label: "Home" },
-  { label: "Infrastructure" },
-];
 
 const categories = [
   { id: "all", label: "All" },
@@ -125,12 +122,15 @@ const Infrastructure = () => {
   return (
     <section className="relative min-h-screen container">
       <div className="py-12">
-        <h1 className="text-secondary-color text-center text-4xl lg:text-5xl mb-4">
-          Explore Our Infrastructure
-        </h1>
-        <p className="text-gray-500 text-center mb-12">
-          Discover our state-of-the-art facilities and achievements.
-        </p>
+        <WordPullUp
+          className="text-dblue text-center text-3xl lg:text-5xl mb-4"
+          words="Explore Our Infrastructure"
+        />
+        {/* Animated Subheading */}
+        <WordFadeIn
+          className="text-gray-500 text-xl text-center mb-12"
+          words="Discover our state-of-the-art facilities and achievements."
+        />
 
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
           {/* Category Filters */}
@@ -179,7 +179,7 @@ const Infrastructure = () => {
                     ? ""
                     : focus === index
                     ? ""
-                    : "grayscale brightness-50 duration-150"
+                    : "blur-[2px] duration-150"
                 }`}
                 onMouseEnter={() => setFocus(index)}
                 onMouseLeave={() => setFocus(null)}
