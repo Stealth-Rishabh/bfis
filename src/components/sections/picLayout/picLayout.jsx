@@ -1,7 +1,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { FaLeaf, FaBook, FaChalkboardTeacher } from "react-icons/fa"; // Import icons
-import heroImage from "@/assets/images/webp/class.webp"; // Updated image path
+// import heroImage from "@/assets/images/webp/class.webp"; // Updated image path
+import heroImage from "@/assets/images/class_t.jpg"; // Updated image path
 
 export default function PicLayout() {
   // References for the image and content container to observe when they come into view

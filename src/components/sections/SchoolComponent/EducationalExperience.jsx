@@ -2,6 +2,12 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import WordPullUp from "@/components/ui/word-pull-up"; // Adjust path if needed
+import academics from "@/assets/images/academics.jpg";
+import extra from "@/assets/images/extra.jpg";
+import studentLife from "@/assets/images/studentLife.jpg";
+import facility from "@/assets/images/facility.jpg";
+import Achievements from "@/assets/images/achieve.jpg";
+import event from "@/assets/images/event.jpg";
 
 /* eslint-disable react/prop-types */
 export default function EducationalExperience() {
@@ -51,7 +57,7 @@ export default function EducationalExperience() {
               title="Academics"
               color="bg-purple-500"
               className="rounded-lg lg:rounded-none lg:rounded-tl-lg"
-              imageSrc="https://www.vibgyorhigh.com/public/assets/frontend/images/education-img1.png"
+              imageSrc={academics}
             />
           </motion.div>
 
@@ -72,7 +78,7 @@ export default function EducationalExperience() {
               title="Student Life"
               color="bg-blue-500"
               className="lg:rounded-none rounded-lg"
-              imageSrc="https://www.vibgyorhigh.com/public/assets/frontend/images/education-img2.png"
+              imageSrc={studentLife}
             />
           </motion.div>
 
@@ -93,7 +99,7 @@ export default function EducationalExperience() {
               title="Achievements"
               color="bg-purple-500"
               className="rounded-lg lg:rounded-none lg:rounded-bl-lg"
-              imageSrc="https://www.vibgyorhigh.com/public/assets/frontend/images/education-img1.png"
+              imageSrc={Achievements}
             />
           </motion.div>
         </div>
@@ -140,7 +146,7 @@ export default function EducationalExperience() {
               title="Extracurricular"
               color="bg-green-500"
               className="rounded-lg lg:rounded-none lg:rounded-tr-lg"
-              imageSrc="https://www.vibgyorhigh.com/public/assets/frontend/images/education-img3.png"
+              imageSrc={extra}
             />
           </motion.div>
 
@@ -161,7 +167,7 @@ export default function EducationalExperience() {
               title="Facilities"
               color="bg-yellow-500"
               className="rounded-lg lg:rounded-none"
-              imageSrc="https://www.vibgyorhigh.com/public/assets/frontend/images/education-img4.png"
+              imageSrc={facility}
             />
           </motion.div>
 
@@ -182,7 +188,7 @@ export default function EducationalExperience() {
               title="Events"
               color="bg-green-500"
               className="rounded-lg lg:rounded-none lg:rounded-br-lg"
-              imageSrc="https://www.vibgyorhigh.com/public/assets/frontend/images/education-img3.png"
+              imageSrc={event}
             />
           </motion.div>
         </div>
@@ -193,7 +199,7 @@ export default function EducationalExperience() {
 
 function ImageSection({ title, color, imageSrc, className }) {
   return (
-    <div className={`relative h-40 overflow-hidden mb-4 md:mb-0 ${className}`}>
+    <div className={`relative h-60 overflow-hidden mb-4 md:mb-0 ${className}`}>
       {/* Image with Zoom-In Effect */}
       <div className="relative h-full overflow-hidden">
         <img
