@@ -66,7 +66,7 @@ const Footer = () => {
                   to="/cbse-disclosure"
                   className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
                 >
-                  CBSEDisclosure
+                  CBSE Disclosure
                 </Link>
               </li>
               <li>
@@ -82,7 +82,7 @@ const Footer = () => {
                   to="/books"
                   className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
                 >
-                  Books List
+                  Book List
                 </Link>
               </li>
               <li>
@@ -98,7 +98,7 @@ const Footer = () => {
                   to="/policies"
                   className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
                 >
-                  Policies
+                  Policies & Governance
                 </Link>
               </li>
               <li>

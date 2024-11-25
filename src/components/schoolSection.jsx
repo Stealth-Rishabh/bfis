@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/button";
 import WordPullUp from "../components/ui/word-pull-up";
+import { useNavigate } from "react-router-dom";
 import pre_primary_boy from "../assets/images/webp/pre_primary_boy.webp";
 import primary_boy from "../assets/images/webp/primary_boy.webp";
 import middle_boy from "../assets/images/webp/middle_boy.webp";
@@ -10,7 +11,7 @@ import smart from "../assets/images/jpg/gallery10.jpg";
 
 const sections = [
   {
-    id: 1,
+    id: "pre-primary",
     title: "PRE-PRIMARY",
     subtitle: "Ages 3-5",
     color: "bg-[#FFB800]",
@@ -19,7 +20,7 @@ const sections = [
       "Our pre-primary program focuses on early childhood development through play-based learning, fostering curiosity and social skills in a nurturing environment.",
   },
   {
-    id: 2,
+    id: "primary",
     title: "PRIMARY",
     subtitle: "Grades 1-5",
     color: "bg-[#26A69A]",
@@ -28,7 +29,7 @@ const sections = [
       "The primary section builds a strong foundation in core subjects while encouraging creativity and critical thinking through interactive and engaging lessons.",
   },
   {
-    id: 3,
+    id: "middle",
     title: "MIDDLE SCHOOL",
     subtitle: "Grades 6-8",
     color: "bg-[#4CAF50]",
@@ -37,7 +38,7 @@ const sections = [
       "Middle school prepares students for higher academic challenges, focusing on developing independent learning skills and exploring diverse subjects and extracurricular activities.",
   },
   {
-    id: 4,
+    id: "high-school",
     title: "HIGH SCHOOL",
     subtitle: "Grades 9-10",
     color: "bg-[#2196F3]",
@@ -46,7 +47,7 @@ const sections = [
       "Our high school program offers a comprehensive curriculum that prepares students for advanced studies, with a focus on academic excellence and personal growth.",
   },
   {
-    id: 5,
+    id: "senior-secondary",
     title: "SENIOR SECONDARY",
     subtitle: "Grades 11-12",
     color: "bg-[#9C27B0]",
@@ -55,7 +56,7 @@ const sections = [
       "The senior secondary program provides specialized streams and career guidance, equipping students with the knowledge and skills needed for higher education and future careers.",
   },
   {
-    id: 6,
+    id: "smart-classes",
     title: "SMART CLASSES",
     subtitle: "Pre-Nursery to Class 12th",
     color: "bg-[#FF5722]",
@@ -66,6 +67,8 @@ const sections = [
 ];
 
 export default function SchoolSection() {
+  const navigate = useNavigate();
+
   return (
     <div className="w-full p-4 py-16">
       <WordPullUp
@@ -90,11 +93,11 @@ export default function SchoolSection() {
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
-              duration: window.innerWidth < 768 ? 0.7 : 1.5, // Faster on mobile
-              delay: window.innerWidth < 768 ? 0 : index * 0.5, // No delay on mobile
+              duration: window.innerWidth < 768 ? 0.7 : 1.5,
+              delay: window.innerWidth < 768 ? 0 : index * 0.5,
               ease: "easeOut",
             }}
-            viewport={{ once: false, amount: 0.4 }} // Re-triggerable animation
+            viewport={{ once: false, amount: 0.4 }}
           >
             <div className="relative w-full h-full flip-card">
               <div
@@ -122,6 +125,7 @@ export default function SchoolSection() {
                 <Button
                   variant="outline"
                   className="bg-white text-black hover:bg-white/90 transition-colors duration-300"
+                  onClick={() => navigate(`/academics#${section.id}`)}
                 >
                   Learn More
                 </Button>

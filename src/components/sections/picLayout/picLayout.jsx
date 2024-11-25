@@ -70,7 +70,7 @@ export default function PicLayout() {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <a
-              href="#programs"
+              href="/programs"
               className="inline-block bg-blue-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-blue-500 transition-colors duration-200"
             >
               Learn More About Our Programs

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { ParallaxProvider } from "react-scroll-parallax";
 import WordPullUp from "@/components/ui/word-pull-up";
@@ -74,6 +74,19 @@ const sections = [
   },
 ];
 
+function scrollToHash() {
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    const element = document.getElementById(hash);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }
+}
+
 // Section Component
 function Section({ section, index }) {
   const ref = useRef(null);
@@ -83,7 +96,7 @@ function Section({ section, index }) {
   const isEven = index % 2 === 0;
 
   return (
-    <div ref={ref}>
+    <div ref={ref} id={section.id}>
       {/* Desktop Layout */}
       <motion.div
         className={`hidden md:grid md:grid-cols-2 gap-8 items-start ${
@@ -142,7 +155,19 @@ function Section({ section, index }) {
                   ))}
                 </div>
               )}
-              <Button className="mt-4" variant="outline">
+              <Button
+                className="mt-4"
+                variant="outline"
+                onClick={() => {
+                  const target = document.getElementById(section.id);
+                  if (target) {
+                    target.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    });
+                  }
+                }}
+              >
                 Learn More
               </Button>
             </motion.div>
@@ -175,7 +200,19 @@ function Section({ section, index }) {
                   ))}
                 </div>
               )}
-              <Button className="mt-4" variant="outline">
+              <Button
+                className="mt-4"
+                variant="outline"
+                onClick={() => {
+                  const target = document.getElementById(section.id);
+                  if (target) {
+                    target.scrollIntoView({
+                      behavior: "smooth",
+                      block: "center",
+                    });
+                  }
+                }}
+              >
                 Learn More
               </Button>
             </motion.div>
@@ -199,92 +236,18 @@ function Section({ section, index }) {
           </>
         )}
       </motion.div>
-
-      {/* Mobile Layout */}
-      <motion.div
-        className="overflow-hidden md:hidden flex flex-col gap-4 items-start"
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-        variants={{
-          hidden: { opacity: 0, scale: 0.95 },
-          visible: { opacity: 1, scale: 1 },
-        }}
-      >
-        {/* Title */}
-        <h2 className="text-4xl font-bold text-indigo-900">{section.title}</h2>
-
-        {/* Image */}
-        <motion.div
-          initial={
-            index < 2
-              ? { opacity: 0, scale: 0.8 }
-              : { x: isEven ? -200 : 200, opacity: 0 }
-          }
-          animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="overflow-hidden rounded shadow-2xl h-60 w-full"
-        >
-          <img
-            src={section.image}
-            alt={section.title}
-            className="w-full h-full object-cover rounded transition-transform duration-300 hover:scale-105"
-          />
-        </motion.div>
-
-        {/* Content */}
-        <motion.div
-          initial={
-            index < 2
-              ? { opacity: 0, scale: 0.8 }
-              : { x: isEven ? 200 : -200, opacity: 0 }
-          }
-          animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="space-y-4 overflow-hidden"
-        >
-          <p className="text-lg text-gray-700">{section.description}</p>
-          {section.highlights && (
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              {section.highlights.map((highlight, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center p-3 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-indigo-900 font-medium transition-all duration-300 hover:bg-opacity-70 hover:shadow-md"
-                >
-                  <ChevronRight className="mr-2 h-4 w-4" />
-                  <span>{highlight}</span>
-                </div>
-              ))}
-            </div>
-          )}
-          <Button className="mt-4" variant="outline">
-            Learn More
-          </Button>
-        </motion.div>
-      </motion.div>
     </div>
   );
 }
 
 export default function Academics() {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start start", "end start"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
+  useEffect(scrollToHash, []); // Ensure scrolling to hash on mount
 
   return (
     <ParallaxProvider>
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100">
         {/* Hero Section */}
-        <motion.div
-          ref={targetRef}
-          style={{ opacity, scale }}
-          className="relative h-screen flex items-center justify-center"
-        >
+        <motion.div className="relative h-screen flex items-center justify-center">
           <div className="text-center z-10">
             <WordPullUp
               words="Academic Excellence at BFIS"
@@ -297,7 +260,7 @@ export default function Academics() {
           </div>
           <div
             className="absolute inset-0 bg-cover bg-center opacity-40 bg-black"
-            style={{ backgroundImage: `url(${banner}?height=1080&width=1920)` }}
+            style={{ backgroundImage: `url(${banner})` }}
           />
         </motion.div>
 

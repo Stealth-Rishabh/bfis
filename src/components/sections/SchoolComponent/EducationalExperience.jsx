@@ -1,9 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import WordPullUp from "@/components/ui/word-pull-up"; // Adjust path if needed
 
 /* eslint-disable react/prop-types */
 export default function EducationalExperience() {
+  const navigate = useNavigate();
+
   // Refs to observe each image
   const image1Ref = useRef(null);
   const image2Ref = useRef(null);
@@ -21,7 +24,7 @@ export default function EducationalExperience() {
   const isImage6InView = useInView(image6Ref, { triggerOnce: false });
 
   return (
-    <div className=" max-w-screen-xl mx-auto px-4 py-16 overflow-hidden">
+    <div className="max-w-screen-xl mx-auto px-4 py-16 overflow-hidden">
       {/* Heading with WordPullUp Animation */}
       <div className="text-center mb-8">
         <WordPullUp
@@ -112,7 +115,10 @@ export default function EducationalExperience() {
             our academic system, we provide a comprehensive learning experience
             through Academics, Events, Facilities, and more.
           </p>
-          <button className="px-4 py-2 bg-[#3B82F6] text-white rounded font-bold transition-colors">
+          <button
+            className="px-4 py-2 bg-[#3B82F6] text-white rounded font-bold transition-colors"
+            onClick={() => navigate("/contact-us")}
+          >
             Learn More
           </button>
         </div>
@@ -188,7 +194,15 @@ export default function EducationalExperience() {
 function ImageSection({ title, color, imageSrc, className }) {
   return (
     <div className={`relative h-40 overflow-hidden mb-4 md:mb-0 ${className}`}>
-      <img src={imageSrc} alt={title} className="w-full h-full object-cover" />
+      {/* Image with Zoom-In Effect */}
+      <div className="relative h-full overflow-hidden">
+        <img
+          src={imageSrc}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+      {/* Title Section */}
       <div className={`absolute bottom-0 left-0 right-0 ${color} p-2`}>
         <h3 className="text-white text-lg font-semibold">{title}</h3>
       </div>
