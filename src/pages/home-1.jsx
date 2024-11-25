@@ -73,11 +73,11 @@ const HomeOne = () => {
         <EducationalExperience />
         <PicLayout />
         <SchoolSection />
+        <GalleryTwo />
         <StudentLife />
+
         <AchievementsSection />
         <FullscreenSections sections={sectionsData} />
-
-        <GalleryTwo />
         <Gallery />
       </div>
     </HelmetProvider>
