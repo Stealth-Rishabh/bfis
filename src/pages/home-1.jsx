@@ -7,12 +7,13 @@ import { Helmet, HelmetProvider } from "react-helmet-async"; // Updated import
 import HeroVideo from "../components/sections/heros/heroVideo";
 import SchoolSection from "../components/schoolSection";
 import Gallery from "../components/sections/gallery/customGallery";
-import GalleryTwo from "../components/sections/gallery/cutomGalleryTwo";
+// import GalleryTwo from "../components/sections/gallery/cutomGalleryTwo";
 import PicLayout from "../components/sections/picLayout/picLayout";
 import FullscreenSections from "../components/sections/FullScreenSections/FullScreenSection";
 import EducationalExperience from "../components/sections/SchoolComponent/EducationalExperience";
 import StudentLife from "../components/studentLife";
 import AchievementsSection from "../components/achievementsSection";
+import BfisLife from "./bfisLife";
 
 import world from "../assets/images/world.png";
 import learn from "../assets/images/learn.png";
@@ -73,11 +74,11 @@ const HomeOne = () => {
         <EducationalExperience />
         <PicLayout />
         <SchoolSection />
-        <GalleryTwo />
         <StudentLife />
-
         <AchievementsSection />
         <FullscreenSections sections={sectionsData} />
+        <BfisLife />
+        {/* <GalleryTwo /> */}
         <Gallery />
       </div>
     </HelmetProvider>

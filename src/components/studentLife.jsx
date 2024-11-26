@@ -4,6 +4,12 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import WordPullUp from "../components/ui/word-pull-up";
+import lifeOne from "@/assets/images/lifeOne.jpg";
+import lifeTwo from "@/assets/images/lifetwo.jpg";
+import lifeThree from "@/assets/images/lifethree.jpg";
+import lifeFour from "@/assets/images/lifefour.jpg";
+import lifeFive from "@/assets/images/lifefive.jpg";
+import lifeSix from "@/assets/images/language_studies.jpg";
 import {
   Trophy,
   Music,
@@ -20,7 +26,7 @@ const activities = [
     description:
       "State-of-the-art sports facilities including football, cricket, basketball, and athletics tracks.",
     icon: <Trophy className="h-10 w-10" />,
-    color: "bg-gradient-to-br from-[#1a237e] to-[#283593]", // Navy blue gradient
+    image: lifeOne,
     stats: "15+ Sports Activities",
   },
   {
@@ -29,17 +35,16 @@ const activities = [
     description:
       "Dedicated spaces for music, dance, and theater to nurture artistic talents.",
     icon: <Music className="h-10 w-10" />,
-    color: "bg-gradient-to-br from-[#2e7d32] to-[#388e3c]", // Green gradient
+    image: lifeTwo,
     stats: "10+ Cultural Events",
   },
-
   {
     id: "science",
     title: "Science Labs",
     description:
       "Well-equipped laboratories for practical learning in physics, chemistry, and biology.",
     icon: <Flask className="h-10 w-10" />,
-    color: "bg-gradient-to-br from-[#0277bd] to-[#0288d1]", // Teal gradient
+    image: lifeThree,
     stats: "6 Advanced Labs",
   },
   {
@@ -48,7 +53,7 @@ const activities = [
     description:
       "Modern library with vast collection of books, journals, and digital resources.",
     icon: <Book className="h-10 w-10" />,
-    color: "bg-gradient-to-br from-[#00695c] to-[#00796b]", // Blue gradient
+    image: lifeFour,
     stats: "20,000+ Books",
   },
   {
@@ -57,7 +62,7 @@ const activities = [
     description:
       "Various clubs for robotics, coding, debate, environmental awareness, and more.",
     icon: <Users className="h-10 w-10" />,
-    color: "bg-gradient-to-br from-[#4a148c] to-[#6a1b9a]", // Purple gradient
+    image: lifeFive,
     stats: "12+ Active Clubs",
   },
   {
@@ -66,7 +71,7 @@ const activities = [
     description:
       "Spaces for painting, sculpture, and other visual arts to foster creativity.",
     icon: <Palette className="h-10 w-10" />,
-    color: "bg-gradient-to-br from-[#e65100] to-[#f57c00]", // Orange gradient
+    image: lifeSix,
     stats: "8+ Art Forms",
   },
 ];
@@ -100,14 +105,12 @@ export default function CampusLife() {
           {activities.map((activity, index) => (
             <motion.div
               key={activity.id}
-              className={`relative overflow-hidden rounded-xl shadow-lg ${
-                activity.color
-              } transform transition-transform duration-300 cursor-pointer ${
+              className={`relative overflow-hidden rounded-xl shadow-lg transform transition-transform duration-300 cursor-pointer ${
                 hoveredId === activity.id ? "scale-105 shadow-2xl" : ""
               }`}
               onMouseEnter={() => setHoveredId(activity.id)}
               onMouseLeave={() => setHoveredId(null)}
-              onClick={() => navigate(`/programs#${activity.id}`)} // Use hash for scrolling to the section
+              onClick={() => navigate(`/programs#${activity.id}`)}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -117,7 +120,24 @@ export default function CampusLife() {
               }}
               viewport={{ once: false, amount: 0.4 }}
             >
-              <div className="p-6 h-full flex flex-col items-center text-center text-white space-y-4">
+              {/* Image with zoom and blur */}
+              <div
+                className={`absolute inset-0 bg-cover bg-center transition-all duration-500 ${
+                  hoveredId === activity.id
+                    ? "scale-110 opacity-100"
+                    : "blur-[2px] brightness-50 opacity-100"
+                }`}
+                style={{
+                  backgroundImage: `url(${activity.image})`,
+                }}
+              ></div>
+
+              {/* Content */}
+              <div
+                className={`relative p-6 h-full flex flex-col items-center text-center text-white space-y-4 z-10 transition-opacity duration-500 ${
+                  hoveredId === activity.id ? "opacity-0" : "opacity-100"
+                }`}
+              >
                 <motion.div
                   className="p-3 rounded-full bg-white bg-opacity-20 transition-transform duration-300"
                   animate={{
@@ -134,12 +154,6 @@ export default function CampusLife() {
                   {activity.description}
                 </p>
               </div>
-              {/* Hover overlay effect */}
-              <div
-                className={`absolute inset-0 bg-black bg-opacity-10 transition-all duration-500 ${
-                  hoveredId === activity.id ? "opacity-30" : "opacity-0"
-                }`}
-              />
             </motion.div>
           ))}
         </div>
