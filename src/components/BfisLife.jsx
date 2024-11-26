@@ -59,7 +59,7 @@ const galleryItems = [
   // },
 ];
 
-export default function BfisLife() {
+const BfisLife = () => {
   const [hoveredId, setHoveredId] = useState(null);
   const navigate = useNavigate();
 
@@ -138,4 +138,6 @@ export default function BfisLife() {
       </div>
     </div>
   );
-}
+};
+
+export default BfisLife;

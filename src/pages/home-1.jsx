@@ -13,13 +13,14 @@ import FullscreenSections from "../components/sections/FullScreenSections/FullSc
 import EducationalExperience from "../components/sections/SchoolComponent/EducationalExperience";
 import StudentLife from "../components/studentLife";
 import AchievementsSection from "../components/achievementsSection";
-import BfisLife from "./bfisLife";
+import BfisLife from "@/components/BfisLife";
 
 import world from "../assets/images/world.png";
 import learn from "../assets/images/learn.png";
 import faculty from "../assets/images/faculty.png";
 import art from "../assets/images/art.png";
 import ethos from "../assets/images/ethos.png";
+import BfisLife from "./bfisLife";
 
 const sectionsData = [
   {
