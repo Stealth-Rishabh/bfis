@@ -4,7 +4,9 @@ import { Eye } from "lucide-react";
 import robotics from "@/assets/images/robotics_lab.jpg";
 import mou from "@/assets/images/mou.jpg";
 import meetvendor from "@/assets/events/10Sept2024/img1.jpg";
-// import ranking from "@/assets/images/ranking.png";
+import sports from "@/assets/images/lifeOne.jpg";
+import extra from "@/assets/images/extra.jpg";
+import parbha from "@/assets/images/parbha.jpg";
 import { useNavigate } from "react-router-dom";
 
 const galleryItems = [
@@ -29,34 +31,34 @@ const galleryItems = [
     image: meetvendor,
     size: "small",
   },
-  // {
-  //   id: 4,
-  //   title: "BFIS Awarded Top Emerging School in Tri-city area",
-  //   date: "",
-  //   image: ranking,
-  //   size: "banner",
-  // },
-  // {
-  //   id: 5,
-  //   title: "JOY OF NATIONAL PRABH AASHA",
-  //   date: "5 Sept 2024",
-  //   image: "https://via.placeholder.com/400x300",
-  //   size: "small",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Teacher's Day Celebration",
-  //   date: "5 Sept 2024",
-  //   image: "https://via.placeholder.com/400x300",
-  //   size: "small",
-  // },
-  // {
-  //   id: 7,
-  //   title: "Sports Activity",
-  //   date: "29 Aug 2024",
-  //   image: "https://via.placeholder.com/400x300",
-  //   size: "small",
-  // },
+  //   {
+  //     id: 4,
+  //     title: "BFIS Awarded Top Emerging School in Tri-city area",
+  //     date: "",
+  //     image: ranking,
+  //     size: "banner",
+  //   },
+  {
+    id: 5,
+    title: "JOY OF NATIONAL PRABH AASHA",
+    date: "5 Sept 2024",
+    image: parbha,
+    size: "small",
+  },
+  {
+    id: 6,
+    title: "Teacher's Day Celebration",
+    date: "5 Sept 2024",
+    image: extra,
+    size: "small",
+  },
+  {
+    id: 7,
+    title: "Sports Activity",
+    date: "29 Aug 2024",
+    image: sports,
+    size: "small",
+  },
 ];
 
 const BfisLife = () => {
@@ -126,7 +128,7 @@ const BfisLife = () => {
               )}
 
               {item.size === "banner" && (
-                <div className="absolute inset-0 bg-blue-600 flex items-center justify-center p-4">
+                <div className="absolute inset-0 bg-hgreen -z-10 flex items-center justify-center p-4">
                   <h3 className="text-white font-bold text-center text-lg">
                     {item.title}
                   </h3>
