@@ -4,6 +4,7 @@ import { Eye } from "lucide-react";
 import robotics from "@/assets/images/robotics_lab.jpg";
 import mou from "@/assets/images/mou.jpg";
 import meetvendor from "@/assets/events/10Sept2024/img1.jpg";
+// import ranking from "@/assets/images/ranking.png";
 import { useNavigate } from "react-router-dom";
 
 const galleryItems = [
@@ -32,30 +33,30 @@ const galleryItems = [
   //   id: 4,
   //   title: "BFIS Awarded Top Emerging School in Tri-city area",
   //   date: "",
-  //   image: "https://via.placeholder.com/800x200",
+  //   image: ranking,
   //   size: "banner",
   // },
-  {
-    id: 5,
-    title: "JOY OF NATIONAL PRABH AASHA",
-    date: "5 Sept 2024",
-    image: "https://via.placeholder.com/400x300",
-    size: "small",
-  },
-  {
-    id: 6,
-    title: "Teacher's Day Celebration",
-    date: "5 Sept 2024",
-    image: "https://via.placeholder.com/400x300",
-    size: "small",
-  },
-  {
-    id: 7,
-    title: "Sports Activity",
-    date: "29 Aug 2024",
-    image: "https://via.placeholder.com/400x300",
-    size: "small",
-  },
+  // {
+  //   id: 5,
+  //   title: "JOY OF NATIONAL PRABH AASHA",
+  //   date: "5 Sept 2024",
+  //   image: "https://via.placeholder.com/400x300",
+  //   size: "small",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Teacher's Day Celebration",
+  //   date: "5 Sept 2024",
+  //   image: "https://via.placeholder.com/400x300",
+  //   size: "small",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Sports Activity",
+  //   date: "29 Aug 2024",
+  //   image: "https://via.placeholder.com/400x300",
+  //   size: "small",
+  // },
 ];
 
 export default function BfisLife() {
