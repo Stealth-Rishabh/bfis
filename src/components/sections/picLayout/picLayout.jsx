@@ -39,9 +39,7 @@ export default function PicLayout() {
             initial={{ opacity: 0, y: 20 }}
             animate={isContentInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            A Place to Grow and Thrive
-          </motion.h2>
+          ></motion.h2>
 
           {/* Key Points with Icons */}
           <motion.div

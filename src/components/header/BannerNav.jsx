@@ -3,7 +3,7 @@ import SocalIcons from "../ui/socalIcons";
 
 const TopHeader = () => {
   return (
-    <div id="top-header" className="bg-[#0d47a1] text-white sm:block hidden">
+    <div id="top-header" className="bg-black text-white sm:block hidden">
       <div className="container mx-auto">
         <div className="flex lg:flex-row flex-col justify-between items-center gap-2 py-3">
           <div>
@@ -12,7 +12,7 @@ const TopHeader = () => {
                 <FaPhone />
                 <a
                   href="tel:+919066790662"
-                  className="hover:text-[#66bb6a] transition-colors"
+                  className="hover:text-red-400 transition-colors"
                 >
                   +91-90667 90662
                 </a>
@@ -21,7 +21,7 @@ const TopHeader = () => {
                 <FaEnvelope />
                 <a
                   href="mailto:info@bfis.in"
-                  className="hover:text-[#66bb6a] transition-colors"
+                  className="hover:text-red-400 transition-colors"
                 >
                   info@bfis.in
                 </a>
@@ -32,7 +32,7 @@ const TopHeader = () => {
                   href="https://www.google.com/maps/place/Sheikhpura+New+Chandigarh,+Kurali-Siswan+Road,+Mohali,+Pin:140110"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#66bb6a] transition-colors"
+                  className="hover:text-red-400 transition-colors"
                 >
                   Sheikhpura New Chandigarh, Kurali-Siswan Road, Dist. S.A.S
                   Nagar, Mohali, Pin: 140110
@@ -41,7 +41,7 @@ const TopHeader = () => {
             </ul>
           </div>
           <div>
-            <SocalIcons className="text-white hover:text-[#66bb6a] transition-colors text-sm" />
+            <SocalIcons className="text-white hover:text-red-400 transition-colors text-sm" />
           </div>
         </div>
       </div>

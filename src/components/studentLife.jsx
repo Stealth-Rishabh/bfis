@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import WordPullUp from "../components/ui/word-pull-up";
+import WordFadeIn from "../components/ui/word-fade-in";
 import lifeOne from "@/assets/images/lifeOne.jpg";
 import lifeTwo from "@/assets/images/lifetwo.jpg";
 import lifeThree from "@/assets/images/lifethree.jpg";
@@ -86,19 +87,14 @@ export default function CampusLife() {
         {/* Animated heading */}
         <WordPullUp
           words="Campus Life"
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#1a237e] text-center mb-4"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-red-800 text-center mb-4"
         />
 
         {/* Animated subheading */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="text-gray-600 text-xl md:text-2xl text-center max-w-2xl mx-auto mb-12"
-        >
-          Experience a vibrant campus life at Brookfield International School
-          where learning goes beyond classrooms.
-        </motion.p>
+        <WordFadeIn
+          words="Experience a vibrant campus life at Brookfield International School where learning goes beyond classrooms."
+          className="max-w-screen-md"
+        />
 
         {/* Cards with animations and hover effects */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

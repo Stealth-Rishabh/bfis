@@ -8,6 +8,7 @@ import sports from "@/assets/images/lifeOne.jpg";
 import extra from "@/assets/images/extra.jpg";
 import parbha from "@/assets/images/parbha.jpg";
 import { useNavigate } from "react-router-dom";
+import WordPullUp from "@/components/ui/word-pull-up";
 
 const galleryItems = [
   {
@@ -67,9 +68,10 @@ const BfisLife = () => {
 
   return (
     <div className="container mx-auto p-4 space-y-4">
-      <h1 className="text-3xl md:text-5xl text-dblue font-bold text-center mb-8">
-        BFIS life
-      </h1>
+      <WordPullUp
+        className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-800 font-roboto mb-12"
+        words="BFIS Life"
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {galleryItems.map((item) => (
@@ -102,23 +104,25 @@ const BfisLife = () => {
                         : "polygon(0 0, 50% 0, 0 50%, 0 0)",
                   }}
                   transition={{ duration: 0.3 }}
-                  className="absolute inset-0 bg-dblue/80 flex flex-col justify-between p-4"
+                  className="absolute inset-0 bg-black/50 flex flex-col justify-between p-4"
                 >
                   <div className="text-white">
                     <h3 className="font-bold text-lg">{item.title}</h3>
-                    {item.date && <p className="text-sm">{item.date}</p>}
+                    {item.date && (
+                      <p className="text-sm text-red-200">{item.date}</p>
+                    )}
                   </div>
                   {/* Eye Icon and Buttons */}
                   <div className="flex justify-between items-center">
                     <div
-                      className="flex items-center gap-2 cursor-pointer text-white"
+                      className="flex items-center gap-2 cursor-pointer text-white hover:text-red-200 transition-colors"
                       onClick={() => navigate("/events")}
                     >
                       <Eye className="h-5 w-5" />
                       <span>Read</span>
                     </div>
                     <button
-                      className="bg-white text-gray-800 px-3 py-1 rounded font-medium hover:bg-gray-100"
+                      className="bg-red-800 text-white px-3 py-1 rounded font-medium hover:bg-red-700 transition-colors"
                       onClick={() => navigate("/events")}
                     >
                       + More
@@ -128,7 +132,7 @@ const BfisLife = () => {
               )}
 
               {item.size === "banner" && (
-                <div className="absolute inset-0 bg-hgreen -z-10 flex items-center justify-center p-4">
+                <div className="absolute inset-0 bg-red-800 -z-10 flex items-center justify-center p-4">
                   <h3 className="text-white font-bold text-center text-lg">
                     {item.title}
                   </h3>

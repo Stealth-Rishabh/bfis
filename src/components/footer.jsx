@@ -16,7 +16,7 @@ import SlideUp from "@/lib/animations/slideUp";
 
 const Footer = () => {
   return (
-    <footer className="pt-20 bg-dblue relative">
+    <footer className="pt-20 bg-black relative">
       <div className="container">
         <div className="grid lg:grid-cols-[300px_auto_auto_268px] sm:grid-cols-2 grid-cols-1 gap-x-7.5 gap-y-10 justify-between text-center sm:text-left">
           <SlideUp delay={2}>
@@ -39,7 +39,7 @@ const Footer = () => {
                   "gap-5 lg:pt-7.5 pt-5 justify-center sm:justify-start"
                 }
                 className={
-                  "w-9 h-9 bg-[#FFFFFF1A] border-none hover:bg-blue-500"
+                  "w-9 h-9 bg-[#FFFFFF1A] border-none hover:bg-red-800"
                 }
               />
             </div>
@@ -50,13 +50,13 @@ const Footer = () => {
               <h3 className="text-2xl font-semibold text-white inline-block">
                 Quick Links
               </h3>
-              <span className="block w-[130%] h-[1px] mt-2 bg-background relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-background after:h-1.5 after:w-1.5 after:rounded-full"></span>
+              <span className="block w-[130%] h-[1px] mt-2 bg-red-800 relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-red-800 after:h-1.5 after:w-1.5 after:rounded-full"></span>
             </div>
             <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5 min-w-[203px]">
               <li>
                 <Link
                   to="/newsletter"
-                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
+                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-red-400"
                 >
                   Newsletter
                 </Link>
@@ -64,7 +64,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/cbse-disclosure"
-                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
+                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-red-400"
                 >
                   CBSE Disclosure
                 </Link>
@@ -72,7 +72,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/uniform"
-                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
+                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-red-400"
                 >
                   Uniform List
                 </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/books"
-                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
+                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-red-400"
                 >
                   Book List
                 </Link>
@@ -88,7 +88,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/work-with-us"
-                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
+                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-red-400"
                 >
                   Work With Us
                 </Link>
@@ -96,7 +96,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/policies"
-                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
+                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-red-400"
                 >
                   Policies & Governance
                 </Link>
@@ -104,7 +104,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="https://www.bfis.in/wp-content/uploads/2024/04/Fee-Structure-Session-2024-25.pdf"
-                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-blue-300"
+                  className="text-white transition-all duration-500 hover:ml-[5px] hover:text-red-400"
                 >
                   Fee Structure
                 </Link>
@@ -115,7 +115,7 @@ const Footer = () => {
           <SlideUp delay={4}>
             <div className="inline-block">
               <h3 className="text-2xl font-semibold text-white">Contact</h3>
-              <span className="block w-[130%] h-[1px] mt-2 bg-background relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-background after:h-1.5 after:w-1.5 after:rounded-full"></span>
+              <span className="block w-[130%] h-[1px] mt-2 bg-red-800 relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-red-800 after:h-1.5 after:w-1.5 after:rounded-full"></span>
             </div>
 
             <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5 items-center sm:items-start">
@@ -128,11 +128,15 @@ const Footer = () => {
               </li>
               <li className="text-white flex gap-4 justify-center sm:justify-start">
                 <FaEnvelope className="mt-1.5" />{" "}
-                <Link to="#">info@bfis.in</Link>
+                <Link to="#" className="hover:text-red-400">
+                  info@bfis.in
+                </Link>
               </li>
               <li className="text-white flex gap-4 justify-center sm:justify-start">
                 <FaPhone className="mt-1.5" />{" "}
-                <Link to="#">+91-90667 90662</Link>
+                <Link to="#" className="hover:text-red-400">
+                  +91-90667 90662
+                </Link>
               </li>
             </ul>
           </SlideUp>
@@ -142,7 +146,7 @@ const Footer = () => {
               <h3 className="text-2xl font-semibold text-white inline-block">
                 Our Newsletter
               </h3>
-              <span className="block w-[120%] h-[1px] mt-2 bg-background relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-background after:h-1.5 after:w-1.5 after:rounded-full"></span>
+              <span className="block w-[120%] h-[1px] mt-2 bg-red-800 relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-red-800 after:h-1.5 after:w-1.5 after:rounded-full"></span>
             </div>
             <div className="lg:pt-7.5 pt-5">
               <p className="text-white">
@@ -159,7 +163,7 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="absolute z-20 h-full right-0 top-1/2 -translate-y-1/2 py-5 px-7.5 bg-blue-600 text-white rounded-tr-md rounded-br-md"
+                    className="absolute z-20 h-full right-0 top-1/2 -translate-y-1/2 py-5 px-7.5 bg-red-800 hover:bg-red-700 text-white rounded-tr-md rounded-br-md transition-colors duration-300"
                   >
                     <FaArrowRight />
                   </button>

@@ -34,7 +34,7 @@ export default function Navbar() {
   const handleMouseLeave = () => setDropdownOpen(false);
 
   return (
-    <div className="px-4 py-4 bg-[#003366] shadow-lg relative z-50">
+    <div className="px-4 py-4 bg-red-800 shadow-lg relative z-50">
       <div className="container flex items-center justify-between mx-auto">
         {/* Logo */}
         <div className="flex items-center space-x-10">
@@ -61,28 +61,26 @@ export default function Navbar() {
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  {/* Dropdown Toggle */}
                   <NavLink
                     to={link.path}
                     className={({ isActive }) =>
                       isActive || isDropdownActive(link.dropdown)
-                        ? "text-[#90caf9] border-b-2 border-[#90caf9] px-3 py-2"
-                        : "text-white hover:text-[#66bb6a] rounded px-3 py-2 transition-colors duration-300"
+                        ? "text-red-200 border-b-2 border-red-200 px-3 py-2"
+                        : "text-white hover:text-red-300 rounded px-3 py-2 transition-colors duration-300"
                     }
                   >
                     {link.name}
                   </NavLink>
-                  {/* Dropdown Menu */}
                   {dropdownOpen && (
-                    <ul className="absolute left-0 mt-2 bg-white text-black shadow-lg rounded py-2 w-48 z-50">
+                    <ul className="absolute left-0 mt-2 bg-red-900 text-white shadow-lg rounded py-2 w-48 z-50">
                       {link.dropdown.map((dropdownItem) => (
                         <li key={dropdownItem.name}>
                           <NavLink
                             to={dropdownItem.path}
                             className={({ isActive }) =>
                               isActive
-                                ? "block px-4 py-2 text-[#90caf9] font-medium"
-                                : "block px-4 py-2 hover:bg-[#f4f4f4] transition-colors duration-300"
+                                ? "block px-4 py-2 text-red-200 font-medium"
+                                : "block px-4 py-2 hover:bg-red-950 transition-colors duration-300"
                             }
                           >
                             {dropdownItem.name}
@@ -98,8 +96,8 @@ export default function Navbar() {
                     to={link.path}
                     className={({ isActive }) =>
                       isActive
-                        ? "text-[#90caf9] border-b-2 border-[#90caf9] px-3 py-2"
-                        : "text-white hover:text-[#66bb6a] rounded px-3 py-2 transition-colors duration-300"
+                        ? "text-red-200 border-b-2 border-red-200 px-3 py-2"
+                        : "text-white hover:text-red-300 rounded px-3 py-2 transition-colors duration-300"
                     }
                   >
                     {link.name}

@@ -35,7 +35,7 @@ export default function WordFadeIn({
       initial="hidden"
       animate={inView ? "visible" : "hidden"} // Animate based on inView state
       className={cn(
-        "font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white  md:leading-[2rem]",
+        "text-xl md:text-2xl font-roboto text-gray-700 text-center mt-6 mb-16 max-w-screen-xl mx-auto",
         className
       )}
     >

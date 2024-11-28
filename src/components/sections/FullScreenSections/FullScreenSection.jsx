@@ -48,7 +48,7 @@ const FullScreenSection = ({ sections }) => {
           className="fixed inset-0 flex items-center justify-center pointer-events-none"
           style={{ opacity: opacityBefore, zIndex: 20 }}
         >
-          <h1 className="text-dblue text-4xl md:text-6xl font-bold text-center max-w-screen-xl">
+          <h1 className="text-red-800 text-3xl md:text-5xl font-bold text-center max-w-screen-xl">
             Shaping Young Minds for a Brighter Tomorrow
           </h1>
         </motion.div>
@@ -84,7 +84,7 @@ const FullScreenSection = ({ sections }) => {
           className="fixed inset-0 flex items-center justify-center pointer-events-none"
           style={{ opacity: opacityAfter, zIndex: 20 }}
         >
-          <h1 className="text-dblue text-4xl md:text-6xl font-bold text-center max-w-screen-xl">
+          <h1 className="text-red-800 text-3xl md:text-5xl font-bold text-center max-w-screen-xl">
             Continuing the Legacy of Academic Excellence
           </h1>
         </motion.div>
