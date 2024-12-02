@@ -6,7 +6,7 @@ const AboutSidebar = ({ sidebarLinks }) => {
   return (
     <div className="col-span-1 mb-16 pt-8 lg:h-[700px] lg:sticky lg:top-4 lg:overflow-y-auto hidden lg:block">
       <div className="flex flex-col h-full p-6 rounded-lg shadow-lg  text-white border border-black">
-        <h2 className="mb-4 text-xl font-semibold tracking-wider uppercase ml-4">
+        <h2 className="mb-4 text-xl text-red-600 font-semibold tracking-wider uppercase ml-4">
           Overview
         </h2>
 
