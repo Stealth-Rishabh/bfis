@@ -67,7 +67,7 @@ function AboutMessage() {
                 initial={{ x: -100, opacity: 0 }}
                 animate={controls}
               >
-                <p className="text-center md:text-left font-bold text-teal-600 font-montserrat">
+                <p className="text-center md:text-left font-bold text-red-600 font-montserrat">
                   Who we are
                 </p>
                 <h3 className="text-center md:text-left text-xl sm:text-2xl font-bold text-gray-800 font-montserrat">
@@ -143,7 +143,7 @@ function AboutMessage() {
                 initial={{ x: -100, opacity: 0 }}
                 animate={controls}
               >
-                <p className="text-center md:text-left font-bold text-teal-600 font-montserrat">
+                <p className="text-center md:text-left font-bold text-red-600 font-montserrat">
                   Message From The Principal
                 </p>
                 <h3 className="text-center md:text-left text-xl sm:text-2xl font-bold font-montserrat text-gray-800">
