@@ -13,7 +13,7 @@ export default function PicLayout() {
 
   return (
     <div className="flex justify-center items-center container max-w-screen-2xl min-h-screen ">
-      <div className="bg-gradient-to-br from-vgreen to-hgreen p-6 md:p-12 flex flex-col md:flex-row items-center text-center md:text-left rounded-lg shadow-xl py-6 md:py-16 max-w-screen-xl">
+      <div className="bg-red-800 p-6 md:p-12 flex flex-col md:flex-row items-center text-center md:text-left rounded-lg shadow-xl py-6 md:py-16 max-w-screen-xl">
         {/* Hero Image Section - Fade In */}
         <motion.div
           className="md:w-1/2 mb-6 md:mb-0"
