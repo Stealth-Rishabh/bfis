@@ -58,7 +58,7 @@ export default function EducationalExperience() {
           >
             <ImageSection
               title="Academics"
-              color="bg-red-900"
+              color="bg-red-600"
               className="rounded-lg lg:rounded-none lg:rounded-tl-lg"
               imageSrc={academics}
             />
@@ -100,7 +100,7 @@ export default function EducationalExperience() {
           >
             <ImageSection
               title="Achievements"
-              color="bg-red-900"
+              color="bg-red-600"
               className="rounded-lg lg:rounded-none lg:rounded-bl-lg"
               imageSrc={Achievements}
             />
@@ -147,7 +147,7 @@ export default function EducationalExperience() {
           >
             <ImageSection
               title="Extracurricular"
-              color="bg-red-900"
+              color="bg-red-600"
               className="rounded-lg lg:rounded-none lg:rounded-tr-lg"
               imageSrc={extra}
             />
@@ -189,7 +189,7 @@ export default function EducationalExperience() {
           >
             <ImageSection
               title="Events"
-              color="bg-red-900"
+              color="bg-red-600"
               className="rounded-lg lg:rounded-none lg:rounded-br-lg"
               imageSrc={event}
             />
