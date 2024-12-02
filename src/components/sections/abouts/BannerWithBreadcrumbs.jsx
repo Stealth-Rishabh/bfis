@@ -42,7 +42,12 @@ const BannerWithBreadcrumbs = ({ title, breadcrumbs, aboutLinks }) => {
       </h1>
 
       {/* Breadcrumb Wrapper */}
-      <div className="absolute z-20 -bottom-5 left-1/2 transform -translate-x-1/2 backdrop-blur-sm rounded-full shadow-lg border border-red-600 bg-red-600">
+      <div
+        className="absolute z-20 -bottom-5 left-1/2 transform -translate-x-1/2 backdrop-blur-sm rounded-full shadow-lg border border-red-600 bg-red-600"
+        style={{
+          padding: "0.5rem 1rem",
+        }}
+      >
         <Breadcrumb>
           <BreadcrumbList className="flex flex-wrap justify-center gap-2 md:gap-3 text-sm md:text-base font-medium text-white relative">
             {/* Home Link */}
