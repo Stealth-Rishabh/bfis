@@ -43,9 +43,6 @@ export default function Navbar() {
               src={logo}
               alt="Brookfield International School Logo"
               className="object-contain lg:h-24 md:h-20 sm:h-16 h-12"
-              style={{
-                filter: "drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.5))",
-              }}
             />
           </NavLink>
         </div>
