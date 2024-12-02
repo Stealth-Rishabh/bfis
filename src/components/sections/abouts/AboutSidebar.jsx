@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const AboutSidebar = ({ sidebarLinks }) => {
   return (
     <div className="col-span-1 mb-16 pt-8 lg:h-[700px] lg:sticky lg:top-4 lg:overflow-y-auto hidden lg:block">
-      <div className="flex flex-col h-full p-6 rounded-lg shadow-lg bg-dblue text-white border border-[#004080]">
+      <div className="flex flex-col h-full p-6 rounded-lg shadow-lg bg-red-600 text-white border border-[#004080]">
         <h2 className="mb-4 text-xl font-semibold tracking-wider uppercase ml-4">
           Overview
         </h2>
