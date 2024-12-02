@@ -41,7 +41,7 @@ function AboutMessage() {
             >
               <WordFadeIn
                 words="President's Message"
-                className="text-2xl sm:text-3xl font-bold font-montserrat text-dteal mb-16 text-center"
+                className="text-2xl sm:text-3xl font-bold font-montserrat text-black mb-16 text-center"
               />
             </motion.h2>
             <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
@@ -111,13 +111,13 @@ function AboutMessage() {
           {/* Principal's Message Section */}
           <div>
             <motion.h2
-              className="text-2xl sm:text-3xl font-bold text-dteal mb-16 text-center font-roboto"
+              className="text-2xl sm:text-3xl font-bold text-black mb-16 text-center font-roboto"
               initial={{ x: -100, opacity: 0 }}
               animate={controls}
             >
               <WordFadeIn
                 words="Principal's Message"
-                className="text-2xl sm:text-3xl font-bold text-dteal font-roboto mb-16 text-center"
+                className="text-2xl sm:text-3xl font-bold text-black font-roboto mb-16 text-center"
               />
             </motion.h2>
             <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
