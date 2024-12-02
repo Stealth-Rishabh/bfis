@@ -35,7 +35,7 @@ export default function EducationalExperience() {
       {/* Heading Section with WordPullUp and WordFadeIn Subheading */}
       <div className="text-center mb-12">
         <WordPullUp
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-800 font-roboto mb-4"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-600 font-roboto mb-4"
           words="Diverse Experience at BFIS"
         />
 

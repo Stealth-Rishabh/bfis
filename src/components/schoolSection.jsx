@@ -68,7 +68,7 @@ export default function SchoolSection() {
       <div className="container mx-auto px-4 py-10">
         <WordPullUp
           words="Academic Excellence"
-          className="text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-red-800 text-center"
+          className="text-4xl md:text-5xl lg:text-6xl font-roboto font-bold text-red-600 text-center"
         />
 
         <WordFadeIn words="Inspiring a Love of Learning from Pre-Primary to Senior Secondary" />
@@ -97,7 +97,7 @@ export default function SchoolSection() {
 
               {/* Content Container */}
               <div className="p-6">
-                <h2 className="text-2xl font-bold text-red-800 mb-3">
+                <h2 className="text-2xl font-bold text-red-600 mb-3">
                   {section.title}
                 </h2>
                 <p className="text-gray-600 mb-6 line-clamp-3">

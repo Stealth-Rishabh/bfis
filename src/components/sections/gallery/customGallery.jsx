@@ -16,7 +16,7 @@ const Gallery = () => {
   return (
     <div className="max-w-screen-xl mx-auto p-4 py-16 mb-16">
       <WordPullUp
-        className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-800 font-roboto mb-12"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-600 font-roboto mb-12"
         words="Gallery"
       />
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

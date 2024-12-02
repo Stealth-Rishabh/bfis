@@ -8,25 +8,25 @@ const achievements = [
     id: 1,
     title: "National Robotics Championship",
     description: "Won 1st place in the National Robotics Competition.",
-    icon: <Trophy className="h-12 w-12 text-red-800" />,
+    icon: <Trophy className="h-12 w-12 text-red-600" />,
   },
   {
     id: 2,
     title: "Science Fair Excellence",
     description: "Best Science Project Award in state-level fair.",
-    icon: <Award className="h-12 w-12 text-red-800" />,
+    icon: <Award className="h-12 w-12 text-red-600" />,
   },
   {
     id: 3,
     title: "Top Athlete Award",
     description: "Awarded to the best performer in inter-school sports.",
-    icon: <Medal className="h-12 w-12 text-red-800" />,
+    icon: <Medal className="h-12 w-12 text-red-600" />,
   },
   {
     id: 4,
     title: "Art Competition Winner",
     description: "Gold medal in the International Art Competition.",
-    icon: <Star className="h-12 w-12 text-red-800" />,
+    icon: <Star className="h-12 w-12 text-red-600" />,
   },
 ];
 
@@ -35,7 +35,7 @@ export default function AchievementsSection() {
     <div className="w-full py-16">
       <div className="container mx-auto px-6 text-center">
         <WordPullUp
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-800 font-roboto mb-12"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-600 font-roboto mb-12"
           words="Celebrating Success"
         />
         <WordFadeIn words="Highlighting our students achievements and milestones in various fields." />

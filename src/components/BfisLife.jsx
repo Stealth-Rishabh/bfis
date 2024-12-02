@@ -69,7 +69,7 @@ const BfisLife = () => {
   return (
     <div className="container mx-auto p-4 space-y-4">
       <WordPullUp
-        className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-800 font-roboto mb-12"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-600 font-roboto mb-12"
         words="BFIS Life"
       />
 

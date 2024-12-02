@@ -87,7 +87,7 @@ export default function CampusLife() {
         {/* Animated heading */}
         <WordPullUp
           words="Campus Life"
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-red-800 text-center mb-4"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-red-600 text-center mb-4"
         />
 
         {/* Animated subheading */}
