@@ -15,7 +15,7 @@ const AboutSidebar = ({ sidebarLinks }) => {
             <Link
               key={link.href}
               to={link.href}
-              className="block px-3 py-2 text-sm text-[#cfd9df] transition-all duration-300 rounded-lg hover:pl-6 hover:text-white hover:bg-red-600 hover:shadow-md"
+              className="block px-3 py-2 text-sm text-black transition-all duration-300 rounded-lg hover:pl-6 hover:text-white hover:bg-red-600 hover:shadow-md"
             >
               {link.label}
             </Link>
