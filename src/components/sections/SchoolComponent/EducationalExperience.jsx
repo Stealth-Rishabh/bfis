@@ -79,7 +79,7 @@ export default function EducationalExperience() {
           >
             <ImageSection
               title="Student Life"
-              color="bg-red-800"
+              color="bg-red-600"
               className="lg:rounded-none rounded-lg"
               imageSrc={studentLife}
             />
@@ -125,7 +125,7 @@ export default function EducationalExperience() {
             through Academics, Events, Facilities, and more.
           </p>
           <button
-            className="px-4 py-2 bg-red-800 hover:bg-red-700 text-white rounded font-bold transition-colors duration-300"
+            className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded font-bold transition-colors duration-300"
             onClick={() => navigate("/contact-us")}
           >
             Learn More
@@ -168,7 +168,7 @@ export default function EducationalExperience() {
           >
             <ImageSection
               title="Facilities"
-              color="bg-red-800"
+              color="bg-red-600"
               className="rounded-lg lg:rounded-none"
               imageSrc={facility}
             />

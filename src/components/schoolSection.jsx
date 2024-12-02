@@ -90,7 +90,7 @@ export default function SchoolSection() {
                   className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-30" />
-                <div className="absolute top-4 left-4 bg-red-800 text-white px-4 py-1 rounded-full text-sm font-medium">
+                <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-1 rounded-full text-sm font-medium">
                   {section.subtitle}
                 </div>
               </div>
@@ -108,7 +108,7 @@ export default function SchoolSection() {
                 <div className="flex justify-between items-center">
                   <button
                     onClick={() => navigate(`/academics#${section.id}`)}
-                    className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-red-800 transition-colors duration-300 group"
+                    className="inline-flex items-center px-4 py-2 bg-black text-white rounded-lg hover:bg-red-600 transition-colors duration-300 group"
                   >
                     <span>Learn More</span>
                     <svg

@@ -34,7 +34,7 @@ export default function Navbar() {
   const handleMouseLeave = () => setDropdownOpen(false);
 
   return (
-    <div className="px-4 py-4 bg-red-800 shadow-lg relative z-50">
+    <div className="px-4 py-4 bg-red-600 shadow-lg relative z-50">
       <div className="container flex items-center justify-between mx-auto">
         {/* Logo */}
         <div className="flex items-center space-x-10">

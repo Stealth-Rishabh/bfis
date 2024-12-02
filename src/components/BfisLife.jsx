@@ -122,7 +122,7 @@ const BfisLife = () => {
                       <span>Read</span>
                     </div>
                     <button
-                      className="bg-red-800 text-white px-3 py-1 rounded font-medium hover:bg-red-700 transition-colors"
+                      className="bg-red-600 text-white px-3 py-1 rounded font-medium hover:bg-red-700 transition-colors"
                       onClick={() => navigate("/events")}
                     >
                       + More
@@ -132,7 +132,7 @@ const BfisLife = () => {
               )}
 
               {item.size === "banner" && (
-                <div className="absolute inset-0 bg-red-800 -z-10 flex items-center justify-center p-4">
+                <div className="absolute inset-0 bg-red-600 -z-10 flex items-center justify-center p-4">
                   <h3 className="text-white font-bold text-center text-lg">
                     {item.title}
                   </h3>

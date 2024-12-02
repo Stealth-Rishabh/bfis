@@ -39,7 +39,7 @@ const Footer = () => {
                   "gap-5 lg:pt-7.5 pt-5 justify-center sm:justify-start"
                 }
                 className={
-                  "w-9 h-9 bg-[#FFFFFF1A] border-none hover:bg-red-800"
+                  "w-9 h-9 bg-[#FFFFFF1A] border-none hover:bg-red-600"
                 }
               />
             </div>
@@ -50,7 +50,7 @@ const Footer = () => {
               <h3 className="text-2xl font-semibold text-white inline-block">
                 Quick Links
               </h3>
-              <span className="block w-[130%] h-[1px] mt-2 bg-red-800 relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-red-800 after:h-1.5 after:w-1.5 after:rounded-full"></span>
+              <span className="block w-[130%] h-[1px] mt-2 bg-red-600 relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-red-600 after:h-1.5 after:w-1.5 after:rounded-full"></span>
             </div>
             <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5 min-w-[203px]">
               <li>
@@ -115,7 +115,7 @@ const Footer = () => {
           <SlideUp delay={4}>
             <div className="inline-block">
               <h3 className="text-2xl font-semibold text-white">Contact</h3>
-              <span className="block w-[130%] h-[1px] mt-2 bg-red-800 relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-red-800 after:h-1.5 after:w-1.5 after:rounded-full"></span>
+              <span className="block w-[130%] h-[1px] mt-2 bg-red-600 relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-red-600 after:h-1.5 after:w-1.5 after:rounded-full"></span>
             </div>
 
             <ul className="flex flex-col lg:gap-[15px] gap-2.5 lg:pt-7.5 pt-5 items-center sm:items-start">
@@ -146,7 +146,7 @@ const Footer = () => {
               <h3 className="text-2xl font-semibold text-white inline-block">
                 Our Newsletter
               </h3>
-              <span className="block w-[120%] h-[1px] mt-2 bg-red-800 relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-red-800 after:h-1.5 after:w-1.5 after:rounded-full"></span>
+              <span className="block w-[120%] h-[1px] mt-2 bg-red-600 relative after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:bg-red-600 after:h-1.5 after:w-1.5 after:rounded-full"></span>
             </div>
             <div className="lg:pt-7.5 pt-5">
               <p className="text-white">
@@ -163,7 +163,7 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="absolute z-20 h-full right-0 top-1/2 -translate-y-1/2 py-5 px-7.5 bg-red-800 hover:bg-red-700 text-white rounded-tr-md rounded-br-md transition-colors duration-300"
+                    className="absolute z-20 h-full right-0 top-1/2 -translate-y-1/2 py-5 px-7.5 bg-red-600 hover:bg-red-700 text-white rounded-tr-md rounded-br-md transition-colors duration-300"
                   >
                     <FaArrowRight />
                   </button>
