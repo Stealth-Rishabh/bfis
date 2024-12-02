@@ -32,7 +32,7 @@ const BannerWithBreadcrumbs = ({ title, breadcrumbs, aboutLinks }) => {
   };
 
   return (
-    <div className="relative w-full h-[35vh] bg-gradient-to-r from-dblue to-hgreen text-white flex items-center justify-center shadow-lg">
+    <div className="relative w-full h-[35vh] bg-black text-white flex items-center justify-center shadow-lg">
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-black opacity-30 mix-blend-overlay"></div>
 
@@ -42,13 +42,7 @@ const BannerWithBreadcrumbs = ({ title, breadcrumbs, aboutLinks }) => {
       </h1>
 
       {/* Breadcrumb Wrapper */}
-      <div
-        className="absolute z-20 -bottom-5 left-1/2 transform -translate-x-1/2 backdrop-blur-sm rounded-full shadow-lg border border-dblue"
-        style={{
-          background: "#003366", // Set gradient directly as background
-          padding: "0.5rem 1rem",
-        }}
-      >
+      <div className="absolute z-20 -bottom-5 left-1/2 transform -translate-x-1/2 backdrop-blur-sm rounded-full shadow-lg border border-red-600 bg-red-600">
         <Breadcrumb>
           <BreadcrumbList className="flex flex-wrap justify-center gap-2 md:gap-3 text-sm md:text-base font-medium text-white relative">
             {/* Home Link */}
