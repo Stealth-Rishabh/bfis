@@ -123,7 +123,7 @@ const Infrastructure = () => {
     <section className="relative min-h-screen container">
       <div className="py-12">
         <WordPullUp
-          className="text-dblue text-center text-3xl lg:text-5xl mb-4"
+          className="text-red-600 text-center text-3xl lg:text-5xl mb-4"
           words="Explore Our Infrastructure"
         />
         {/* Animated Subheading */}

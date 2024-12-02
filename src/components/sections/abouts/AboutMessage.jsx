@@ -22,13 +22,13 @@ function AboutMessage() {
         <div className="mx-auto max-w-screen-xl px-4 md:px-8 space-y-16">
           {/* Main Heading */}
           <motion.h1
-            className="text-center text-4xl sm:text-5xl md:text-6xl font-bold my-8 text-dblue font-roboto"
+            className="text-center text-4xl sm:text-5xl md:text-6xl font-bold my-8 text-red-600 font-roboto"
             initial={{ x: -100, opacity: 0 }}
             animate={controls}
           >
             <WordPullUp
               words="Leadership Message"
-              className="text-center text-4xl sm:text-5xl md:text-6xl font-bold my-8 text-dblue font-roboto"
+              className="text-center text-4xl sm:text-5xl md:text-6xl font-bold my-8 text-red-600 font-roboto"
             />
           </motion.h1>
 

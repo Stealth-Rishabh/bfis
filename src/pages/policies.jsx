@@ -126,7 +126,7 @@ export default function PoliciesPage() {
         >
           {/* Heading with WordPullUp Animation */}
           <WordPullUp
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-dblue"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-red-600"
             words="Policies & Governance"
           />
         </motion.div>

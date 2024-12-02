@@ -52,7 +52,7 @@ export default function ContactUs() {
         >
           {/* Animated Heading */}
           <WordPullUp
-            className="text-5xl font-extrabold text-dblue mb-4"
+            className="text-5xl font-extrabold text-red-600 mb-4"
             words="Get In Touch"
           />
           {/* Animated Description */}

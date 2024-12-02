@@ -66,7 +66,7 @@ export function GalleryTwo() {
   return (
     <div className="relative flex h-[650px] w-full flex-col items-center justify-center overflow-hidden py-16">
       <div className="max-w-screen-xl w-full mx-auto text-center">
-        <h2 className="text-dblue text-4xl md:text-6xl font-bold mb-8 sm:mt-12 font-roboto">
+        <h2 className="text-red-600 text-4xl md:text-6xl font-bold mb-8 sm:mt-12 font-roboto">
           What&apos;s Happening
         </h2>
         {/* Top Marquee */}

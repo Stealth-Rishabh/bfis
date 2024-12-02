@@ -17,7 +17,7 @@ function AboutValues() {
         >
           <WordPullUp
             words="Values & Ethos"
-            className="text-4xl md:text-5xl font-bold text-dblue mb-4"
+            className="text-4xl md:text-5xl font-bold text-red-600 mb-4"
           />
         </motion.div>
 
@@ -31,7 +31,7 @@ function AboutValues() {
         >
           <WordFadeIn
             words="Our Vision"
-            className="text-2xl font-bold text-dblue lg:text-left"
+            className="text-2xl font-bold text-red-600 lg:text-left"
           />
           <p className="text-gray-700 text-base leading-relaxed">
             BFIS prepares its community to be confident citizens and leaders in
@@ -50,7 +50,7 @@ function AboutValues() {
         >
           <WordFadeIn
             words="Our Mission"
-            className="text-2xl font-bold text-dblue lg:text-left"
+            className="text-2xl font-bold text-red-600 lg:text-left"
           />
           <p className="text-gray-700 text-base leading-relaxed">
             To deliver academic excellence and create inspiring places for
@@ -85,7 +85,9 @@ function AboutValues() {
             className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
           >
             <FaUsers className="text-blue-600 text-4xl mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold text-dblue mb-2">Community</h3>
+            <h3 className="text-xl font-semibold text-red-600 mb-2">
+              Community
+            </h3>
             <p className="text-gray-700 text-base">
               We foster a sense of belonging and unity, ensuring everyone feels
               valued and respected.
@@ -101,7 +103,9 @@ function AboutValues() {
             className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
           >
             <FaHandsHelping className="text-blue-600 text-4xl mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold text-dblue mb-2">Integrity</h3>
+            <h3 className="text-xl font-semibold text-red-600 mb-2">
+              Integrity
+            </h3>
             <p className="text-gray-700 text-base">
               We believe in honesty, transparency, and accountability in all our
               actions.
@@ -117,7 +121,7 @@ function AboutValues() {
             className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-center"
           >
             <FaLightbulb className="text-blue-600 text-4xl mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold text-dblue mb-2">
+            <h3 className="text-xl font-semibold text-red-600 mb-2">
               Innovation
             </h3>
             <p className="text-gray-700 text-base">
