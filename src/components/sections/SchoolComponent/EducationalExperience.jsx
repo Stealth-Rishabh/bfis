@@ -61,6 +61,7 @@ export default function EducationalExperience() {
               color="bg-red-600"
               className="rounded-lg lg:rounded-none lg:rounded-tl-lg"
               imageSrc={academics}
+              onClick={() => navigate("/admission")}
             />
           </motion.div>
 
@@ -82,6 +83,7 @@ export default function EducationalExperience() {
               color="bg-red-600"
               className="lg:rounded-none rounded-lg"
               imageSrc={studentLife}
+              onClick={() => navigate("/events")}
             />
           </motion.div>
 
@@ -103,6 +105,11 @@ export default function EducationalExperience() {
               color="bg-red-600"
               className="rounded-lg lg:rounded-none lg:rounded-bl-lg"
               imageSrc={Achievements}
+              onClick={() => {
+                const achievementsSection =
+                  document.getElementById("achievements");
+                achievementsSection?.scrollIntoView({ behavior: "smooth" });
+              }}
             />
           </motion.div>
         </div>
@@ -126,7 +133,7 @@ export default function EducationalExperience() {
           </p>
           <button
             className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded font-bold transition-colors duration-300"
-            onClick={() => navigate("/contact-us")}
+            onClick={() => navigate("/academics")}
           >
             Learn More
           </button>
@@ -150,6 +157,7 @@ export default function EducationalExperience() {
               color="bg-red-600"
               className="rounded-lg lg:rounded-none lg:rounded-tr-lg"
               imageSrc={extra}
+              onClick={() => navigate("/events")}
             />
           </motion.div>
 
@@ -171,6 +179,7 @@ export default function EducationalExperience() {
               color="bg-red-600"
               className="rounded-lg lg:rounded-none"
               imageSrc={facility}
+              onClick={() => navigate("/infrastructure")}
             />
           </motion.div>
 
@@ -192,6 +201,7 @@ export default function EducationalExperience() {
               color="bg-red-600"
               className="rounded-lg lg:rounded-none lg:rounded-br-lg"
               imageSrc={event}
+              onClick={() => navigate("/events")}
             />
           </motion.div>
         </div>
@@ -200,9 +210,12 @@ export default function EducationalExperience() {
   );
 }
 
-function ImageSection({ title, color, imageSrc, className }) {
+function ImageSection({ title, color, imageSrc, className, onClick }) {
   return (
-    <div className={`relative h-60 overflow-hidden mb-4 md:mb-0 ${className}`}>
+    <div
+      className={`relative h-60 overflow-hidden mb-4 md:mb-0 ${className} cursor-pointer`}
+      onClick={onClick}
+    >
       <div className="relative h-full overflow-hidden">
         <img
           src={imageSrc}

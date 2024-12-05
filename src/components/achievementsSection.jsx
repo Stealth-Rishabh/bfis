@@ -32,7 +32,7 @@ const achievements = [
 
 export default function AchievementsSection() {
   return (
-    <div className="w-full py-16">
+    <div id="achievements" className="w-full py-16">
       <div className="container mx-auto px-6 text-center">
         <WordPullUp
           className="text-3xl sm:text-4xl md:text-5xl font-bold text-red-600 font-roboto mb-12"
