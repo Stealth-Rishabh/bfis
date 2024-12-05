@@ -10,7 +10,7 @@ module.exports = {
   prefix: "",
   theme: {
     container: {
-      center: true, // Fixed 'true' string to a boolean value
+      center: true,
       screens: {
         xl: "1290px",
         lg: "1024px",
@@ -29,8 +29,8 @@ module.exports = {
         12.5: "50px",
       },
       backgroundImage: {
-        "testimonial-banner": "url('/assets/images/testimonial/bg-img.png')", // Corrected quote placement
-        "newsletter-banner": "url('/assets/images/newsletter/bg-img.png')", // Corrected quote placement
+        "testimonial-banner": "url('/assets/images/testimonial/bg-img.png')",
+        "newsletter-banner": "url('/assets/images/newsletter/bg-img.png')",
       },
       boxShadow: {
         sm: "0px 0px 10px 0px rgba(0, 0, 0, 0.2)",
@@ -83,7 +83,7 @@ module.exports = {
           foreground: "var(--green-foreground)",
         },
         cream: {
-          DEFAULT: "#f5f5dc", // Corrected the color value
+          DEFAULT: "#f5f5dc",
           foreground: "var(--cream-foreground)",
         },
         card: {
