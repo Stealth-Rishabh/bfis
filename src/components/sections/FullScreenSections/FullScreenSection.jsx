@@ -42,13 +42,13 @@ const FullScreenSection = ({ sections }) => {
   return (
     <div className="relative w-full">
       {/* Text Before Images */}
-      <div ref={textBeforeRef} className="relative h-screen">
+      <div ref={textBeforeRef} className="relative h-[50vh]">
         {/* Fixed Text Overlay */}
         <motion.div
           className="fixed inset-0 flex items-center justify-center pointer-events-none"
           style={{ opacity: opacityBefore, zIndex: 20 }}
         >
-          <h1 className="text-red-600 text-3xl md:text-5xl font-bold text-center max-w-screen-xl">
+          <h1 className="text-red-600 text-3xl md:text-5xl font-bold text-center max-w-[90vw]">
             Shaping Young Minds for a Brighter Tomorrow
           </h1>
         </motion.div>
@@ -78,13 +78,13 @@ const FullScreenSection = ({ sections }) => {
       </div>
 
       {/* Text After Images */}
-      <div ref={textAfterRef} className="relative h-screen">
+      <div ref={textAfterRef} className="relative  h-[50vh]">
         {/* Fixed Text Overlay */}
         <motion.div
           className="fixed inset-0 flex items-center justify-center pointer-events-none"
           style={{ opacity: opacityAfter, zIndex: 20 }}
         >
-          <h1 className="text-red-600 text-3xl md:text-5xl font-bold text-center max-w-screen-xl">
+          <h1 className="text-red-600 text-3xl md:text-5xl font-bold text-center  max-w-[90vw]">
             Continuing the Legacy of Academic Excellence
           </h1>
         </motion.div>

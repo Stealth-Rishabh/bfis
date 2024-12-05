@@ -12,7 +12,7 @@ export default function PicLayout() {
   const isContentInView = useInView(contentRef, { triggerOnce: true });
 
   return (
-    <div className="flex justify-center items-center container max-w-screen-2xl min-h-screen ">
+    <div className="flex justify-center items-center container max-w-screen-2xl">
       <div className="bg-red-600 p-6 md:p-12 flex flex-col md:flex-row items-center text-center md:text-left rounded-lg shadow-xl py-6 md:py-16 max-w-screen-xl">
         {/* Hero Image Section - Fade In */}
         <motion.div

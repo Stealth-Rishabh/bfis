@@ -126,7 +126,7 @@ function Section({ section, index }) {
               {section.highlights.map((highlight, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center p-2 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-red-600 font-medium text-sm"
+                  className="flex items-center p-2 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-gray-800 font-medium text-sm"
                 >
                   <ChevronRight className="mr-2 h-4 w-4" />
                   <span>{highlight}</span>
@@ -137,13 +137,7 @@ function Section({ section, index }) {
           <Button
             className="mt-4 w-full bg-red-600 text-white hover:bg-lblue hover:text-white"
             onClick={() => {
-              const target = document.getElementById(section.id);
-              if (target) {
-                target.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center",
-                });
-              }
+              window.location.href = "/contact-us";
             }}
           >
             Learn More
@@ -193,7 +187,7 @@ function Section({ section, index }) {
                   {section.highlights.map((highlight, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center p-3 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-red-600 font-medium transition-all duration-300 hover:bg-opacity-70 hover:shadow-md"
+                      className="flex items-center p-3 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-gray-800 font-medium transition-all duration-300 hover:bg-opacity-70 hover:shadow-md"
                     >
                       <ChevronRight className="mr-2 h-4 w-4" />
                       <span>{highlight}</span>
@@ -204,13 +198,7 @@ function Section({ section, index }) {
               <Button
                 className="mt-4 bg-red-600 text-white hover:bg-lblue hover:text-white"
                 onClick={() => {
-                  const target = document.getElementById(section.id);
-                  if (target) {
-                    target.scrollIntoView({
-                      behavior: "smooth",
-                      block: "center",
-                    });
-                  }
+                  window.location.href = "/contact-us";
                 }}
               >
                 Learn More
@@ -234,7 +222,7 @@ function Section({ section, index }) {
                   {section.highlights.map((highlight, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center p-3 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-red-600 font-medium transition-all duration-300 hover:bg-opacity-70 hover:shadow-md"
+                      className="flex items-center p-3 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-gray-800 font-medium transition-all duration-300 hover:bg-opacity-70 hover:shadow-md"
                     >
                       <ChevronRight className="mr-2 h-4 w-4" />
                       <span>{highlight}</span>
@@ -245,13 +233,7 @@ function Section({ section, index }) {
               <Button
                 className="mt-4 bg-red-600 text-white hover:bg-lblue hover:text-white"
                 onClick={() => {
-                  const target = document.getElementById(section.id);
-                  if (target) {
-                    target.scrollIntoView({
-                      behavior: "smooth",
-                      block: "center",
-                    });
-                  }
+                  window.location.href = "/contact-us";
                 }}
               >
                 Learn More
@@ -293,7 +275,7 @@ export default function Academics() {
             />
             <WordFadeIn
               words="Discover our comprehensive programs for academic and personal growth."
-              className="text-lg md:text-xl text-red-600"
+              className="text-lg md:text-xl text-gray-800"
             />
           </div>
           <div
