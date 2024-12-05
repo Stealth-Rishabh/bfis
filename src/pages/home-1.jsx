@@ -73,10 +73,11 @@ const HomeOne = () => {
         <HeroVideo />
         <EducationalExperience />
         <PicLayout />
-        <SchoolSection />
+        <FullscreenSections sections={sectionsData} />
         <StudentLife />
         <AchievementsSection />
-        <FullscreenSections sections={sectionsData} />
+
+        <SchoolSection />
         <BfisLife />
         {/* <GalleryTwo /> */}
         <Gallery />
