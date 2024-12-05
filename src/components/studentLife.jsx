@@ -106,7 +106,13 @@ export default function CampusLife() {
               }`}
               onMouseEnter={() => setHoveredId(activity.id)}
               onMouseLeave={() => setHoveredId(null)}
-              onClick={() => navigate(`/programs#${activity.id}`)}
+              onClick={() =>
+                navigate(
+                  activity.id === "sports"
+                    ? "/sports"
+                    : `/program#${activity.id}`
+                )
+              }
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{

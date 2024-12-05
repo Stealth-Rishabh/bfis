@@ -16,7 +16,7 @@ export default function Navbar() {
       ],
     },
     { name: "Academics", path: "/academics" },
-    { name: "Programs", path: "/programs" },
+    { name: "Programs", path: "/program" },
     { name: "Admissions", path: "/admission" },
     { name: "Infrastructure", path: "/infrastructure" },
     { name: "Events", path: "/events" },

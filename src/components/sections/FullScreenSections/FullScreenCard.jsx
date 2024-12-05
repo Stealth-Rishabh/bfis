@@ -1,7 +1,12 @@
 import { useState } from "react";
 /* eslint-disable react/prop-types */
 
-const FullScreenCard = ({ backgroundImage, heading, buttonText }) => {
+const FullScreenCard = ({
+  backgroundImage,
+  heading,
+  buttonText,
+  onButtonClick,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -24,6 +29,7 @@ const FullScreenCard = ({ backgroundImage, heading, buttonText }) => {
         className="group relative inline-flex items-center bg-red-600 text-white font-bold py-4 pl-6 pr-24 overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onClick={onButtonClick}
       >
         <span className="relative z-10 mr-2 text-2xl">{buttonText}</span>
 

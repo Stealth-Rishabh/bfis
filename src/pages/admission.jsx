@@ -28,6 +28,7 @@ function Admission() {
       ),
       image: HowToApplyImage,
       icon: <FaClipboardList className="text-2xl text-blue-600" />,
+      onClick: () => (window.location.href = "/contact-us"),
     },
     {
       title: "Request School Private Tour",
@@ -36,6 +37,7 @@ function Admission() {
       ),
       image: RequestTourImage,
       icon: <FaPhoneAlt className="text-2xl text-red-500" />,
+      onClick: () => (window.location.href = "tel:9066790662"),
     },
     {
       title: "Day Care & After School",
@@ -55,6 +57,7 @@ function Admission() {
       ),
       image: DayCareImage,
       icon: <FaChild className="text-2xl text-green-600" />,
+      onClick: () => (window.location.href = "/contact-us"),
     },
   ];
 
@@ -84,7 +87,8 @@ function Admission() {
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className={`flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8 p-6 rounded-lg shadow-lg transition transform-gpu hover:scale-[1.03] ${
+            onClick={section.onClick}
+            className={`flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8 p-6 rounded-lg shadow-lg transition transform-gpu hover:scale-[1.03] cursor-pointer ${
               index === 1
                 ? "bg-gradient-to-r from-purple-50 to-purple-100"
                 : "bg-white"
@@ -96,12 +100,11 @@ function Admission() {
               className="w-full md:w-1/2 rounded-lg shadow-md"
             />
             <div className="flex-1 space-y-4">
-              <div className="flex items-center space-x-2">
-                {section.icon}
-                <WordFadeIn
-                  words={section.title}
-                  className="text-2xl font-semibold text-blue-800"
-                />
+              <div className="flex items-center gap-4">
+                <div className="flex-shrink-0">{section.icon}</div>
+                <h3 className="text-2xl font-semibold text-blue-800">
+                  {section.title}
+                </h3>
               </div>
               <div className="text-gray-700 text-base leading-relaxed">
                 {section.content}

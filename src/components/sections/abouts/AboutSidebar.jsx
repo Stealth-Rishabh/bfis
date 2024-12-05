@@ -15,14 +15,17 @@ const AboutSidebar = ({ sidebarLinks }) => {
             <Link
               key={link.href}
               to={link.href}
-              className="block px-3 py-2 text-sm text-black transition-all duration-300 rounded-lg hover:pl-6 hover:text-white hover:bg-red-600 hover:shadow-md"
+              className="block px-3 py-2 text-sm text-gray-800 transition-all duration-300 rounded-lg hover:pl-6 hover:text-white hover:bg-red-600 hover:shadow-md"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <Button className="w-full px-3 py-2 mb-6 font-bold text-white bg-gradient-to-r from-[#b22222] to-[#ff4500] rounded-lg shadow-lg transition-all duration-300 hover:from-[#ff4500] hover:to-[#b22222]">
+        <Button
+          onClick={() => (window.location.href = "/contact-us")}
+          className="w-full px-3 py-2 mb-6 font-bold text-white bg-gradient-to-r from-[#b22222] to-[#ff4500] rounded-lg shadow-lg transition-all duration-300 hover:from-[#ff4500] hover:to-[#b22222]"
+        >
           Apply Online
         </Button>
 

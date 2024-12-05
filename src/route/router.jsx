@@ -1,5 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop"; // Adjust path as needed
+import ProgramDetail from "../components/ProgramDetail"; // Add this import
+import { subjects } from "../pages/ProgramPage"; // Add this import
 
 // Main Pages
 import ContactUs from "../pages/contact-us";
@@ -30,6 +32,9 @@ const aboutSidebarLinks = [
   { href: "/about/values", label: "Our Values" },
   { href: "/about/set-us-apart", label: "What Sets Us Apart" },
 ];
+
+// Add this import
+import SportsPage from "../pages/SportsPage";
 
 // Create and export the router
 export const router = createBrowserRouter([
@@ -77,8 +82,12 @@ export const router = createBrowserRouter([
 
       // Programs Route with Dynamic Subroute
       {
-        path: "/programs",
+        path: "/program",
         element: <ProgramPage />,
+      },
+      {
+        path: "/program/:programId",
+        element: <ProgramDetail subjects={subjects} />,
       },
 
       {
@@ -126,6 +135,12 @@ export const router = createBrowserRouter([
       {
         path: "/admission",
         element: <Admission />,
+      },
+
+      // Add this route in your router configuration
+      {
+        path: "/sports",
+        element: <SportsPage />,
       },
     ],
   },

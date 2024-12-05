@@ -20,7 +20,7 @@ const sections = [
   {
     id: "pre-primary",
     title: "Pre-Primary School",
-    description: `The first chapter of your child’s education at Brookfield begins here and includes children aged between 3-5 years. During these formative years, a carefully integrated programme of learning is provided which covers seven key areas.`,
+    description: `The first chapter of your child's education at Brookfield begins here and includes children aged between 3-5 years. During these formative years, a carefully integrated programme of learning is provided which covers seven key areas.`,
     highlights: [
       "Personal, Social and Emotional Development",
       "Communication and Language",
@@ -31,6 +31,7 @@ const sections = [
       "Expressive Arts and Design",
     ],
     image: prePrimary,
+    sticky: true,
   },
   {
     id: "primary",
@@ -47,6 +48,7 @@ const sections = [
       "and more..",
     ],
     image: primary,
+    sticky: true,
   },
   {
     id: "middle",
@@ -62,8 +64,8 @@ const sections = [
   },
   {
     id: "senior-secondary",
-    title: "Senior Secondary School",
-    description: `The Senior Secondary School BFIS is equipped with advanced infrastructure and modern facilities. Our classrooms feature advanced technology, and we offer well-equipped science and computer labs for hands-on learning.`,
+    title: "Senior secondary School",
+    description: `The Senior secondary School BFIS is equipped with advanced infrastructure and modern facilities. Our classrooms feature advanced technology, and we offer well-equipped science and computer labs for hands-on learning.`,
     image: seniorSecondarySchool,
   },
   {
@@ -96,12 +98,62 @@ function Section({ section, index }) {
   const isEven = index % 2 === 0;
 
   return (
-    <div ref={ref} id={section.id}>
+    <div ref={ref} id={section.id} className="">
+      {/* Mobile Layout */}
+      <div className="block md:hidden mb-8">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.8 }}
+          className="overflow-hidden rounded shadow-2xl h-48 w-full mb-4"
+        >
+          <img
+            src={section.image}
+            alt={section.title}
+            className="w-full h-full object-cover rounded transition-transform duration-300 hover:scale-105"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.8 }}
+          className="space-y-4"
+        >
+          <h2 className="text-3xl font-bold text-red-600">{section.title}</h2>
+          <p className="text-base text-gray-700">{section.description}</p>
+          {section.highlights && (
+            <div className="grid grid-cols-1 gap-2 mt-4">
+              {section.highlights.map((highlight, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center p-2 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-red-600 font-medium text-sm"
+                >
+                  <ChevronRight className="mr-2 h-4 w-4" />
+                  <span>{highlight}</span>
+                </div>
+              ))}
+            </div>
+          )}
+          <Button
+            className="mt-4 w-full bg-red-600 text-white hover:bg-lblue hover:text-white"
+            onClick={() => {
+              const target = document.getElementById(section.id);
+              if (target) {
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                });
+              }
+            }}
+          >
+            Learn More
+          </Button>
+        </motion.div>
+      </div>
+
       {/* Desktop Layout */}
       <motion.div
-        className={`hidden md:grid md:grid-cols-2 gap-8 items-start ${
-          index >= 2 ? "overflow-hidden" : ""
-        }`}
+        className={`hidden md:grid md:grid-cols-2 gap-8 items-start`}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -112,15 +164,12 @@ function Section({ section, index }) {
       >
         {isEven ? (
           <>
-            {/* Image on the Left */}
             <motion.div
-              initial={
-                index < 2 ? { opacity: 0, scale: 0.8 } : { x: -200, opacity: 0 }
-              } // Fade-in for "Pre-Primary" and "Primary", slide-in for others
-              animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
+              initial={{ opacity: 0, x: -50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className={`max-w-screen-xl overflow-hidden rounded shadow-2xl h-60 w-full ${
-                index < 2 ? "md:sticky top-8" : ""
+              className={`overflow-hidden rounded shadow-2xl h-60 ${
+                section.sticky ? "md:sticky md:top-0" : ""
               }`}
             >
               <img
@@ -129,16 +178,13 @@ function Section({ section, index }) {
                 className="w-full h-full object-cover rounded transition-transform duration-300 hover:scale-105"
               />
             </motion.div>
-            {/* Content on the Right */}
             <motion.div
-              initial={
-                index < 2 ? { opacity: 0, scale: 0.8 } : { x: 200, opacity: 0 }
-              }
-              animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
+              initial={{ opacity: 0, x: 50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className="space-y-4 overflow-hidden"
+              className="space-y-4"
             >
-              <h2 className="text-4xl font-bold text-indigo-900">
+              <h2 className="text-4xl font-bold text-red-600">
                 {section.title}
               </h2>
               <p className="text-lg text-gray-700">{section.description}</p>
@@ -147,7 +193,7 @@ function Section({ section, index }) {
                   {section.highlights.map((highlight, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center p-3 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-indigo-900 font-medium transition-all duration-300 hover:bg-opacity-70 hover:shadow-md"
+                      className="flex items-center p-3 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-red-600 font-medium transition-all duration-300 hover:bg-opacity-70 hover:shadow-md"
                     >
                       <ChevronRight className="mr-2 h-4 w-4" />
                       <span>{highlight}</span>
@@ -173,16 +219,13 @@ function Section({ section, index }) {
           </>
         ) : (
           <>
-            {/* Content on the Left */}
             <motion.div
-              initial={
-                index < 2 ? { opacity: 0, scale: 0.8 } : { x: -200, opacity: 0 }
-              }
-              animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
+              initial={{ opacity: 0, x: -50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className="space-y-4 overflow-hidden"
+              className="space-y-4"
             >
-              <h2 className="text-4xl font-bold text-indigo-900">
+              <h2 className="text-4xl font-bold text-red-600">
                 {section.title}
               </h2>
               <p className="text-lg text-gray-700">{section.description}</p>
@@ -191,7 +234,7 @@ function Section({ section, index }) {
                   {section.highlights.map((highlight, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center p-3 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-indigo-900 font-medium transition-all duration-300 hover:bg-opacity-70 hover:shadow-md"
+                      className="flex items-center p-3 bg-white bg-opacity-50 backdrop-blur-md rounded shadow-sm text-red-600 font-medium transition-all duration-300 hover:bg-opacity-70 hover:shadow-md"
                     >
                       <ChevronRight className="mr-2 h-4 w-4" />
                       <span>{highlight}</span>
@@ -214,15 +257,12 @@ function Section({ section, index }) {
                 Learn More
               </Button>
             </motion.div>
-            {/* Image on the Right */}
             <motion.div
-              initial={
-                index < 2 ? { opacity: 0, scale: 0.8 } : { x: 200, opacity: 0 }
-              }
-              animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}}
+              initial={{ opacity: 0, x: 50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className={`overflow-hidden rounded shadow-2xl h-60 w-full ${
-                index < 2 ? "md:sticky top-8" : ""
+              className={`overflow-hidden rounded shadow-2xl h-60 ${
+                section.sticky ? "md:sticky md:top-0" : ""
               }`}
             >
               <img
@@ -246,14 +286,14 @@ export default function Academics() {
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100">
         {/* Hero Section */}
         <motion.div className="relative h-screen flex items-center justify-center">
-          <div className="text-center z-10">
+          <div className="text-center z-10 px-4">
             <WordPullUp
               words="Academic Excellence at BFIS"
-              className="text-3xl md:text-5xl lg:text-6xl font-bold text-indigo-900 mb-4"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold text-red-600 mb-4"
             />
             <WordFadeIn
               words="Discover our comprehensive programs for academic and personal growth."
-              className="text-xl text-indigo-700"
+              className="text-lg md:text-xl text-red-600"
             />
           </div>
           <div
@@ -263,7 +303,7 @@ export default function Academics() {
         </motion.div>
 
         {/* Sections */}
-        <div className="container mx-auto px-4 py-16 space-y-32">
+        <div className="container mx-auto px-4 py-16 space-y-16 md:space-y-32">
           {sections.map((section, index) => (
             <Section key={section.id} section={section} index={index} />
           ))}

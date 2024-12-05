@@ -73,7 +73,7 @@ const BannerWithBreadcrumbs = ({ title, breadcrumbs, aboutLinks }) => {
               {showDropdown && (
                 <div
                   ref={dropdownRef}
-                  className="absolute left-0 mt-2 bg-white text-black rounded shadow-lg z-[9999]"
+                  className="absolute left-0 mt-2 bg-white text-gray-800 rounded shadow-lg z-[9999]"
                   style={{
                     top: "100%",
                     marginTop: "0.5rem",

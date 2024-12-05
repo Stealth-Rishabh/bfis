@@ -43,6 +43,7 @@ module.exports = {
         montserrat: ['"Montserrat"', "sans-serif"],
       },
       colors: {
+        nblue: "#053a86",
         dblue: "#003366",
         lblue: "#194775",
         dteal: "#004d40",
