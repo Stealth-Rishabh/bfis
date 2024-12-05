@@ -140,7 +140,7 @@ export const router = createBrowserRouter([
       // Add this route in your router configuration
       {
         path: "/sports",
-        element: <SportPage />,
+        element: <SportsPage />,
       },
     ],
   },
