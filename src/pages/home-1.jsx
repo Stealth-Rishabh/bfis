@@ -17,7 +17,7 @@ import BfisLife from "@/components/BfisLife";
 
 import world from "../assets/images/world.png";
 import learn from "../assets/images/learn.png";
-import faculty from "../assets/images/faculty.png";
+//import faculty from "../assets/images/faculty.png";
 import art from "../assets/images/art.png";
 import ethos from "../assets/images/ethos.png";
 

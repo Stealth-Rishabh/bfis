@@ -1,22 +1,18 @@
-import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-  css: {
-    preprocessorOptions: {
-      css: {
-        additionalData: `@import "slick-carousel/slick/slick.css"; @import "slick-carousel/slick/slick-theme.css";`,
-      },
-    },
+  base: "/", // This is important for routing
+  server: {
+    historyApiFallback: true, // Enable client-side routing
   },
   build: {
-    sourcemap: false, // Disables source maps in production
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
 });
