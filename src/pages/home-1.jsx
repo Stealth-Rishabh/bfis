@@ -27,7 +27,7 @@ const sectionsData = [
     backgroundImage: `${world}`,
     heading: "World-Class Learning",
     buttonText: "Know More",
-    onButtonClick: () => (window.location.href = "/programs"),
+    onButtonClick: () => (window.location.href = "/program"),
   },
   {
     id: "section-2",
