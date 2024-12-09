@@ -4,20 +4,17 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/",
+  base: "/BFIS/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
   server: {
-    historyApiFallback: true,
+    port: 3000,
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
-    },
+  preview: {
+    port: 8080,
+    strictPort: true,
   },
 });

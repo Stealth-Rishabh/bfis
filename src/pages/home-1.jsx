@@ -21,47 +21,49 @@ import learn from "../assets/images/learn.png";
 import art from "../assets/images/art.png";
 import ethos from "../assets/images/ethos.png";
 
-const sectionsData = [
-  {
-    id: "section-1",
-    backgroundImage: `${world}`,
-    heading: "World-Class Learning",
-    buttonText: "Know More",
-    onButtonClick: () => (window.location.href = "/program"),
-  },
-  {
-    id: "section-2",
-    backgroundImage: `${learn}`,
-    heading: "Innovative E-Learning Facilities",
-    buttonText: "Know More",
-    onButtonClick: () => (window.location.href = "/academics#smart-classes"),
-  },
-  {
-    id: "section-5",
-    backgroundImage: `${ethos}`,
-    heading: "BFIS Values & Ethos",
-    buttonText: "Know More",
-    onButtonClick: () => (window.location.href = "/about/values"),
-  },
-  // {
-  //   id: "section-3",
-  //   backgroundImage: `${faculty}`,
-  //   heading: "Experienced Faculty",
-  //   buttonText: "Know More",
-  //   onButtonClick: () => (window.location.href = "/programs"),
-  // },
-  {
-    id: "section-4",
-    backgroundImage: `${art}`,
-    heading: "State-of-the-art Facilities",
-    buttonText: "Know More",
-    onButtonClick: () => (window.location.href = "/infrastructure"),
-  },
-];
+import { useNavigate } from "react-router-dom";
 
 const HomeOne = () => {
   const ref = useRef(null);
-  // If HomeOne.jsx doesn't use motion, useScroll, useTransform, remove them from imports.
+  const navigate = useNavigate();
+
+  const sectionsData = [
+    {
+      id: "section-1",
+      backgroundImage: world,
+      heading: "World-Class Learning",
+      buttonText: "Know More",
+      onButtonClick: () => navigate("/program"),
+    },
+    {
+      id: "section-2",
+      backgroundImage: learn,
+      heading: "Innovative E-Learning Facilities",
+      buttonText: "Know More",
+      onButtonClick: () => navigate("/academics#smart-classes"),
+    },
+    {
+      id: "section-5",
+      backgroundImage: ethos,
+      heading: "BFIS Values & Ethos",
+      buttonText: "Know More",
+      onButtonClick: () => navigate("/about/values"),
+    },
+    // {
+    //   id: "section-3",
+    //   backgroundImage: `${faculty}`,
+    //   heading: "Experienced Faculty",
+    //   buttonText: "Know More",
+    //   onButtonClick: () => (window.location.href = "/programs"),
+    // },
+    {
+      id: "section-4",
+      backgroundImage: art,
+      heading: "State-of-the-art Facilities",
+      buttonText: "Know More",
+      onButtonClick: () => navigate("/infrastructure"),
+    },
+  ];
 
   return (
     <HelmetProvider>

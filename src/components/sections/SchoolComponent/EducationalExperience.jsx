@@ -61,7 +61,7 @@ export default function EducationalExperience() {
               color="bg-red-600"
               className="rounded-lg lg:rounded-none lg:rounded-tl-lg"
               imageSrc={academics}
-              onClick={() => navigate("/admission")}
+              onClick={() => navigate("/academics")}
             />
           </motion.div>
 
