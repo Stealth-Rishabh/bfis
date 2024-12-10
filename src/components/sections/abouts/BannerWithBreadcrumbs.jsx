@@ -9,6 +9,7 @@ import {
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
 import { ChevronDown } from "lucide-react";
+import AboutBanner from "@/assets/images/AboutBanner.webp";
 
 const BannerWithBreadcrumbs = ({ title, breadcrumbs, aboutLinks }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -32,12 +33,19 @@ const BannerWithBreadcrumbs = ({ title, breadcrumbs, aboutLinks }) => {
   };
 
   return (
-    <div className="relative w-full h-[35vh] bg-black text-white flex items-center justify-center shadow-lg">
-      {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black opacity-30 mix-blend-overlay"></div>
+    <div
+      className="relative w-full h-[35vh] flex items-center justify-center shadow-lg"
+      style={{
+        backgroundImage: `url(${AboutBanner})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      {/* Animated Title */}
-      <h1 className="text-3xl md:text-5xl font-bold z-20 text-center animate-fadeInUp">
+      {/* Content */}
+      <h1 className="text-3xl md:text-5xl font-bold z-20 text-center animate-fadeInUp text-white">
         {title}
       </h1>
 

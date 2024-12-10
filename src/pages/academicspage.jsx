@@ -4,6 +4,7 @@
 import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { useNavigate } from "react-router-dom";
 import WordPullUp from "@/components/ui/word-pull-up";
 import WordFadeIn from "@/components/ui/word-fade-in";
 import { Button } from "@/components/ui/button";
@@ -93,6 +94,7 @@ function scrollToHash() {
 function Section({ section, index }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-50px" });
+  const navigate = useNavigate();
 
   // Determine if the index is even or odd for alternating layout
   const isEven = index % 2 === 0;
@@ -136,9 +138,7 @@ function Section({ section, index }) {
           )}
           <Button
             className="mt-4 w-full bg-red-600 text-white hover:bg-lblue hover:text-white"
-            onClick={() => {
-              window.location.href = "/contact-us";
-            }}
+            onClick={() => navigate("/contact-us")}
           >
             Learn More
           </Button>
@@ -197,9 +197,7 @@ function Section({ section, index }) {
               )}
               <Button
                 className="mt-4 bg-red-600 text-white hover:bg-lblue hover:text-white"
-                onClick={() => {
-                  window.location.href = "/contact-us";
-                }}
+                onClick={() => navigate("/contact-us")}
               >
                 Learn More
               </Button>
@@ -232,9 +230,7 @@ function Section({ section, index }) {
               )}
               <Button
                 className="mt-4 bg-red-600 text-white hover:bg-lblue hover:text-white"
-                onClick={() => {
-                  window.location.href = "/contact-us";
-                }}
+                onClick={() => navigate("/contact-us")}
               >
                 Learn More
               </Button>

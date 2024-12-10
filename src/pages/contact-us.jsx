@@ -10,18 +10,76 @@ export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
+
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
+  const validateName = (name) => {
+    const nameRegex = /^[A-Za-z\s]+$/;
+    if (!nameRegex.test(name)) {
+      return "Name should only contain letters and spaces";
+    }
+    return "";
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return "Please enter a valid email address";
+    }
+    return "";
+  };
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[6-9]\d{9}$/;
+    if (!phoneRegex.test(phone)) {
+      return "Phone number must be 10 digits and start with 6-9";
+    }
+    return "";
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+
+    // Validate on change
+    if (name === "name") {
+      setErrors((prev) => ({ ...prev, name: validateName(value) }));
+    }
+    if (name === "email") {
+      setErrors((prev) => ({ ...prev, email: validateEmail(value) }));
+    }
+    if (name === "phone") {
+      setErrors((prev) => ({ ...prev, phone: validatePhone(value) }));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validate all fields before submission
+    const nameError = validateName(formData.name);
+    const emailError = validateEmail(formData.email);
+    const phoneError = validatePhone(formData.phone);
+
+    setErrors({
+      name: nameError,
+      email: emailError,
+      phone: phoneError,
+    });
+
+    if (nameError || emailError || phoneError) {
+      return;
+    }
+
     console.log("Form Data Submitted:", formData);
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   const fadeInFromRight = {
@@ -94,6 +152,9 @@ export default function ContactUs() {
                   required
                   className="mt-2 block w-full px-5 py-3 bg-gray-300 text-gray-800 border border-gray-600 rounded-lg focus:ring-red-600 focus:border-red-600 transition duration-200"
                 />
+                {errors.name && (
+                  <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                )}
               </motion.div>
               <motion.div
                 initial="hidden"
@@ -116,6 +177,34 @@ export default function ContactUs() {
                   required
                   className="mt-2 block w-full px-5 py-3 bg-gray-300 text-gray-800 border border-gray-600 rounded-lg focus:ring-red-600 focus:border-red-600 transition duration-200"
                 />
+                {errors.email && (
+                  <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                )}
+              </motion.div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                variants={fadeIn}
+              >
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-white"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="mt-2 block w-full px-5 py-3 bg-gray-300 text-gray-800 border border-gray-600 rounded-lg focus:ring-red-600 focus:border-red-600 transition duration-200"
+                />
+                {errors.phone && (
+                  <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                )}
               </motion.div>
               <motion.div
                 initial="hidden"
@@ -159,11 +248,17 @@ export default function ContactUs() {
           <div className="space-y-8 order-2 lg:order-1">
             {/* Address Card */}
             <motion.div
-              className="bg-[#ffb800] p-6 rounded-lg shadow-lg flex items-center space-x-4"
+              className="bg-[#ffb800] p-6 rounded-lg shadow-lg flex items-center space-x-4 cursor-pointer hover:bg-[#e6a600] transition-colors"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false }}
               variants={fadeInFromLeft}
+              onClick={() =>
+                window.open(
+                  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.9442364188503!2d76.61709347467625!3d30.832228618259553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ff17915555555%3A0x742607647b86d7b9!2sBrookfield%20International%20School!5e0!3m2!1sen!2sin!4v1729859443063!5m2!1sen!2sin",
+                  "_blank"
+                )
+              }
             >
               <MapPin className="w-8 h-8 text-white" />
               <div>
@@ -178,11 +273,12 @@ export default function ContactUs() {
             </motion.div>
             {/* Phone Card */}
             <motion.div
-              className="bg-[#26A69A] p-6 rounded-lg shadow-lg flex items-center space-x-4"
+              className="bg-[#26A69A] p-6 rounded-lg shadow-lg flex items-center space-x-4 cursor-pointer hover:bg-[#219187] transition-colors"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false }}
               variants={fadeInFromLeft}
+              onClick={() => (window.location.href = "tel:+919066790662")}
             >
               <Phone className="w-8 h-8 text-white" />
               <div>
@@ -192,11 +288,12 @@ export default function ContactUs() {
             </motion.div>
             {/* Email Card */}
             <motion.div
-              className="bg-[#4CAF50] p-6 rounded-lg shadow-lg flex items-center space-x-4"
+              className="bg-[#4CAF50] p-6 rounded-lg shadow-lg flex items-center space-x-4 cursor-pointer hover:bg-[#449d48] transition-colors"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false }}
               variants={fadeInFromLeft}
+              onClick={() => (window.location.href = "mailto:info@bfis.in")}
             >
               <Mail className="w-8 h-8 text-white" />
               <div>

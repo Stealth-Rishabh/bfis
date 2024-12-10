@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaLeaf, FaBook, FaChalkboardTeacher } from "react-icons/fa"; // Import icons
 // import heroImage from "@/assets/images/webp/class.webp"; // Updated image path
 import heroImage from "@/assets/images/class_t.jpg"; // Updated image path
@@ -7,6 +8,7 @@ import heroImage from "@/assets/images/class_t.jpg"; // Updated image path
 export default function PicLayout() {
   // References for the image and content container to observe when they come into view
   const contentRef = useRef(null);
+  const navigate = useNavigate();
 
   // Detect when the elements are in view
   const isContentInView = useInView(contentRef, { triggerOnce: true });
@@ -68,12 +70,12 @@ export default function PicLayout() {
             animate={isContentInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <a
-              href="/programs"
+            <button
+              onClick={() => navigate("/program")}
               className="inline-block bg-blue-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-blue-500 transition-colors duration-200"
             >
               Learn More About Our Programs
-            </a>
+            </button>
           </motion.div>
         </div>
       </div>

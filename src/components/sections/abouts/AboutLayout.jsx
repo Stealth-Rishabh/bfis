@@ -15,9 +15,9 @@ const AboutLayout = ({ sidebarLinks }) => {
 
   // Define About Dropdown Links
   const aboutLinks = [
-    { href: "/about/message", label: "Message" },
-    { href: "/about/values", label: "Our Values" },
-    { href: "/about/set-us-apart", label: "What Sets Us Apart" },
+    { href: "/BFIS/about/message", label: "Message" },
+    { href: "/BFIS/about/values", label: "Our Values" },
+    { href: "/BFIS/about/set-us-apart", label: "What Sets Us Apart" },
   ];
 
   // Determine title based on the current path

@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const AboutSidebar = ({ sidebarLinks }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="col-span-1 mb-16 pt-8 lg:h-[700px] lg:sticky lg:top-4 lg:overflow-y-auto hidden lg:block">
       <div className="flex flex-col h-full p-6 rounded-lg shadow-lg  text-white border border-black">
@@ -23,7 +25,7 @@ const AboutSidebar = ({ sidebarLinks }) => {
         </nav>
 
         <Button
-          onClick={() => (window.location.href = "/contact-us")}
+          onClick={() => navigate("/contact-us")}
           className="w-full px-3 py-2 mb-6 font-bold text-white bg-gradient-to-r from-[#b22222] to-[#ff4500] rounded-lg shadow-lg transition-all duration-300 hover:from-[#ff4500] hover:to-[#b22222]"
         >
           Apply Online
@@ -38,6 +40,7 @@ const AboutSidebar = ({ sidebarLinks }) => {
             <Button
               variant="outline"
               className="text-white transition-colors bg-transparent border border-white rounded-lg hover:bg-white hover:text-red-600 max-w-[90%] text-sm"
+              onClick={() => navigate("/contact-us")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

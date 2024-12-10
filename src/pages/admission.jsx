@@ -5,8 +5,11 @@ import { FaClipboardList, FaPhoneAlt, FaChild } from "react-icons/fa";
 import HowToApplyImage from "@/assets/images/one.jpg";
 import RequestTourImage from "@/assets/images/two.jpg";
 import DayCareImage from "@/assets/images/three.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Admission() {
+  const navigate = useNavigate();
+
   const sections = [
     {
       title: "How to apply?",
@@ -28,7 +31,7 @@ function Admission() {
       ),
       image: HowToApplyImage,
       icon: <FaClipboardList className="text-2xl text-blue-600" />,
-      onClick: () => (window.location.href = "/contact-us"),
+      onClick: () => navigate("/contact-us"),
     },
     {
       title: "Request School Private Tour",
@@ -57,7 +60,7 @@ function Admission() {
       ),
       image: DayCareImage,
       icon: <FaChild className="text-2xl text-green-600" />,
-      onClick: () => (window.location.href = "/contact-us"),
+      onClick: () => navigate("/contact-us"),
     },
   ];
 

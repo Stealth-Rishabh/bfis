@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   Sheet,
   SheetContent,
@@ -11,10 +11,17 @@ import {
 import { Menu } from "lucide-react";
 
 const Drawer = () => {
-  // Updated navlinks to match Navbar
   const navlinks = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
+    {
+      name: "About Us",
+      path: "/about",
+      dropdown: [
+        { name: "Message", path: "/about/message" },
+        { name: "Our Values", path: "/about/values" },
+        { name: "What Sets Us Apart", path: "/about/set-us-apart" },
+      ],
+    },
     { name: "Academics", path: "/academics" },
     { name: "Programs", path: "/program" },
     { name: "Admissions", path: "/admission" },
@@ -25,33 +32,45 @@ const Drawer = () => {
 
   return (
     <Sheet>
-      {/* Trigger for Mobile Drawer */}
       <SheetTrigger className="lg:hidden block">
         <Menu className="w-8 h-8 text-white" />
       </SheetTrigger>
 
-      {/* Drawer Content */}
-      <SheetContent className="bg-gradient-to-br from-[#003366] via-[#002244] to-[#001122]">
+      <SheetContent className="bg-[#003366]">
         <SheetHeader>
-          {/* Drawer Title */}
           <SheetTitle className="text-white text-2xl font-bold text-left">
             Brookfield International School
           </SheetTitle>
 
-          {/* Navigation Links */}
           <SheetDescription className="text-white text-left pt-5">
             <nav>
               <ul className="space-y-2">
-                {navlinks.map((link, index) => (
-                  <li key={index}>
+                {navlinks.map((link) => (
+                  <li key={link.name}>
                     <SheetClose asChild>
-                      <Link
+                      <NavLink
                         to={link.path}
-                        className="block py-2 px-4 font-semibold text-slate-200 tracking-wide hover:bg-white/10 hover:text-white rounded transition duration-300"
+                        className="block py-2 px-4 font-semibold text-slate-200 hover:bg-white/10 rounded"
                       >
                         {link.name}
-                      </Link>
+                      </NavLink>
                     </SheetClose>
+                    {link.dropdown && (
+                      <ul className="ml-4 space-y-1">
+                        {link.dropdown.map((dropdownItem) => (
+                          <li key={dropdownItem.name}>
+                            <SheetClose asChild>
+                              <NavLink
+                                to={dropdownItem.path}
+                                className="block py-2 px-4 font-medium text-slate-200 hover:bg-white/10 rounded"
+                              >
+                                {dropdownItem.name}
+                              </NavLink>
+                            </SheetClose>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 ))}
               </ul>

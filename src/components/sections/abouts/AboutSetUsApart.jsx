@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FaGlobe, FaAward, FaChalkboardTeacher } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import campusImage from "@/assets/images/one.jpg";
 import internationalImage from "@/assets/images/two.jpg";
 import awardsImage from "@/assets/images/three.jpg";
@@ -14,6 +15,8 @@ import WordPullUp from "@/components/ui/word-pull-up";
 import WordFadeIn from "@/components/ui/word-fade-in";
 
 function AboutSetUsApart() {
+  const navigate = useNavigate();
+
   const counters = [
     { id: 1, label: "Students", value: 1800 },
     { id: 2, label: "Faculty", value: 150 },
@@ -258,7 +261,7 @@ function AboutSetUsApart() {
           <Slider {...sliderSettings}>
             <div className="p-6 bg-white rounded-lg shadow-md">
               <p className="text-gray-700">
-                &quot;Brookfield’s approach has helped my child excel
+                &quot;Brookfield's approach has helped my child excel
                 academically and socially!&quot;
               </p>
               <p className="mt-4 text-blue-800 font-semibold">
@@ -282,8 +285,11 @@ function AboutSetUsApart() {
         <p className="mt-4 text-lg">
           Contact us to learn more about enrollment opportunities!
         </p>
-        <button className="mt-8 px-8 py-3 bg-pink-500 hover:bg-pink-600 rounded-full font-bold">
-          Contact Admissions
+        <button
+          onClick={() => navigate("/contact-us")}
+          className="mt-8 px-8 py-3 bg-pink-500 hover:bg-pink-600 rounded-full font-bold"
+        >
+          Contact Us
         </button>
       </section>
     </div>
