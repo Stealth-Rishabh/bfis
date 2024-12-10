@@ -210,7 +210,7 @@ export default function CBSEDisclosure() {
           <div className="relative">
             <button
               onClick={closeLightbox}
-              className="absolute top-2 right-2 text-white text-3xl font-bold cursor-pointer"
+              className="absolute top-2 right-2 text-black text-3xl font-bold cursor-pointer"
             >
               &times;
             </button>

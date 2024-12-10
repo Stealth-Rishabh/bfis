@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ChevronRight, Star } from "lucide-react";
+import KritiBora from "../assets/images/kritibora.webp";
 
 const benefits = [
   {
@@ -139,7 +140,7 @@ export default function WorkWithUs() {
           <div className="relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-[#26A69A] to-[#9C27B0] opacity-70"></div>
             <motion.img
-              src="https://www.bfis.in/wp-content/uploads/2021/04/President-BFIS-300x300.jpg"
+              src={KritiBora}
               alt="Collaborative work environment"
               className="object-cover w-full h-full"
               variants={imageVariants}
