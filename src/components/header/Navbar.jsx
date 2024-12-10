@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
-import logo from "@/assets/images/logo_w.png";
+import logo from "@/assets/images/logo_white.webp";
 import Drawer from "./Drawer";
 
 export default function Navbar() {
