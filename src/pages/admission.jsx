@@ -42,26 +42,26 @@ function Admission() {
       icon: <FaPhoneAlt className="text-2xl text-red-500" />,
       onClick: () => (window.location.href = "tel:9066790662"),
     },
-    {
-      title: "Day Care & After School",
-      content: (
-        <>
-          <p>
-            Brookfield offers a safe, engaging day-care environment for children
-            to socialize and learn.
-          </p>
-          <ul className="list-disc list-inside mt-2">
-            <li>Quality care in a secure and healthy environment.</li>
-            <li>Opportunities to develop social skills with peers.</li>
-            <li>Well-trained, caring teachers.</li>
-            <li>Bedding available for rest and relaxation.</li>
-          </ul>
-        </>
-      ),
-      image: DayCareImage,
-      icon: <FaChild className="text-2xl text-green-600" />,
-      onClick: () => navigate("/contact-us"),
-    },
+    // {
+    //   title: "Day Care & After School",
+    //   content: (
+    //     <>
+    //       <p>
+    //         Brookfield offers a safe, engaging day-care environment for children
+    //         to socialize and learn.
+    //       </p>
+    //       <ul className="list-disc list-inside mt-2">
+    //         <li>Quality care in a secure and healthy environment.</li>
+    //         <li>Opportunities to develop social skills with peers.</li>
+    //         <li>Well-trained, caring teachers.</li>
+    //         <li>Bedding available for rest and relaxation.</li>
+    //       </ul>
+    //     </>
+    //   ),
+    //   image: DayCareImage,
+    //   icon: <FaChild className="text-2xl text-green-600" />,
+    //   onClick: () => navigate("/contact-us"),
+    // },
   ];
 
   return (

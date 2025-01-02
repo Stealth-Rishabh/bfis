@@ -105,7 +105,7 @@ export const subjects = [
       "Many of our pupils already speak enough English to access our curriculum, but for those who cannot we provide support both within the mainstream classroom and in separate specialist classes as necessary.",
     highlight:
       "Being an international school – we give importance to other languages spoken around the world",
-    languages: ["French", "German", "Spanish", "Italian"],
+    languages: ["French",],
     image: LanguageStudies,
     bgColor: "#9C27B0",
     animationDirection: "left",
