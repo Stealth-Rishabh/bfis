@@ -21,7 +21,7 @@ function AboutSetUsApart() {
     { id: 1, label: "Students", value: 1800 },
     { id: 2, label: "Faculty", value: 150 },
     { id: 3, label: "Acres Campus", value: 7 },
-    { id: 4, label: "Alumni", value: 10000 },
+ 
   ];
 
   const counterDuration = 2; // Duration for counters to complete in seconds
@@ -170,7 +170,7 @@ function AboutSetUsApart() {
 
       {/* Stats Section */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
           {counters.map((counter) => (
             <Counter
               key={counter.id}
