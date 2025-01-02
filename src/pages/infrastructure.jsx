@@ -14,7 +14,7 @@ import gallery1 from "../assets/images/jpg/gallery1.jpg";
 import gallery2 from "../assets/images/jpg/gallery2.jpg";
 import gallery3 from "../assets/images/jpg/gallery3.jpg";
 import gallery4 from "../assets/images/jpg/gallery4.jpg";
-import gallery5 from "../assets/images/jpg/gallery5.jpg";
+// import gallery5 from "../assets/images/jpg/gallery5.jpg";
 import gallery6 from "../assets/images/jpg/gallery6.jpg";
 import gallery7 from "../assets/images/jpg/gallery7.jpg";
 import gallery8 from "../assets/images/jpg/gallery8.jpg";
@@ -50,7 +50,7 @@ const images = [
   gallery2,
   gallery3,
   gallery4,
-  gallery5,
+
   gallery6,
   gallery7,
   gallery8,
