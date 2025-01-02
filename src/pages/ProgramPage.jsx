@@ -79,7 +79,7 @@ export const subjects = [
     id: "robotics",
     title: "Robotics",
     description:
-      "Our robotics curriculum introduces students to automation, IOT and the future. The rate at which technology is advancing, robotics is fast becoming a main field subject and has tremendous potential to grow.",
+      "Our robotics curriculum introduces students to automation, IOT, AI & VR for the future. The rate at which technology is advancing, robotics is fast becoming a main field subject and has tremendous potential to grow.",
     highlight:
       "Robotics connect math and science beautifully and shows practical applications of many concepts",
     image: Robotics,
