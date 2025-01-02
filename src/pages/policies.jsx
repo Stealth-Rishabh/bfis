@@ -46,7 +46,7 @@ const policies = [
     icon: <Briefcase className="icon" />,
   },
   {
-    text: "If any student continues to be absent for a week without any intimation, his/her name will be struck off from the school. In the case of rejoining, admission fee will be charged",
+    text: "If any student continues to be absent for a week without any intimation, his/her name will be struck off from the school. In case of rejoining, admission fee will be charged",
     icon: <AlertTriangle className="icon" />,
   },
   {
