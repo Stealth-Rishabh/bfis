@@ -30,9 +30,7 @@ const Footer = () => {
             </div>
             <div className="mt-10">
               <p className="text-white opacity-80">
-                We nurture young minds to achieve excellence. Our commitment to
-                holistic education ensures that every child finds their passion
-                and reaches their full potential.
+                We cultivate the potential of young minds to excel. Our dedication to comprehensive education guarantees that each child discovers their interests and achieves their utmost capabilities.
               </p>
               <SocalIcons
                 prentClass={
@@ -122,7 +120,7 @@ const Footer = () => {
               <li className="text-white flex gap-4 justify-center sm:justify-start">
                 <FaLocationDot className="mt-1.5" />{" "}
                 <span className="max-w-[168px]">
-                  Sheikhpura New Chandigarh, Kurali-Siswan Road, Dist. S.A.S
+                  Sheikhpura, New Chandigarh, Kurali-Siswan Road, Dist. S.A.S
                   Nagar, Mohali, Pin: 140110
                 </span>
               </li>
@@ -135,7 +133,7 @@ const Footer = () => {
               <li className="text-white flex gap-4 justify-center sm:justify-start">
                 <FaPhone className="mt-1.5" />{" "}
                 <Link to="#" className="hover:text-red-400">
-                  +91-90667 90662
+                  +91-9066790662
                 </Link>
               </li>
             </ul>
