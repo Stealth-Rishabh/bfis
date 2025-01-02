@@ -21,7 +21,7 @@ const sections = [
   {
     id: "pre-primary",
     title: "Pre-Primary School",
-    description: `The first chapter of your child's education at Brookfield begins here and includes children aged between 3-5 years. During these formative years, a carefully integrated programme of learning is provided which covers seven key areas.`,
+    description: `The first chapter of your child's education at Brookfield begins here and includes children aged between 2+ - 5 years. During these formative years, a carefully integrated programme of learning is provided which covers seven key areas.`,
     highlights: [
       "Personal, Social and Emotional Development",
       "Communication and Language",
@@ -41,12 +41,9 @@ const sections = [
     highlights: [
       "English",
       "Hindi",
-      "Sanskrit",
+      "Punjabi",
       "Social Studies",
       "General Science",
-      "Physics",
-      "Chemistry",
-      "and more..",
     ],
     image: primary,
     sticky: true,

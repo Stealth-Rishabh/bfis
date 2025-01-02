@@ -13,7 +13,7 @@ const sections = [
   {
     id: "pre-primary",
     title: "PRE-PRIMARY",
-    subtitle: "Ages 3-5",
+    subtitle: "Ages 2+ - 5",
     image: prePrimary,
     description:
       "Our pre-primary program focuses on early childhood development through play-based learning, fostering curiosity and social skills in a nurturing environment.",
