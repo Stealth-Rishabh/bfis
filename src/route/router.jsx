@@ -58,7 +58,7 @@ export const router = createBrowserRouter(
           element: (
             <>
               <Helmet>
-                <title>BFIS - Best School in Chandigarh | Home</title>
+                <title>BFIS | Brookfield International School</title>
                 <meta
                   name="description"
                   content="Welcome to BFIS, the leading school in Chandigarh. We provide excellent education with state-of-the-art facilities and experienced faculty."
