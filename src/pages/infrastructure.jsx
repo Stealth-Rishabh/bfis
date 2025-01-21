@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Button } from "../components/ui/button";
-import LazyLoad from "react-lazyload";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css"; // Optional - for blur effect
+
 import {
   Select,
   SelectContent,
@@ -171,31 +173,23 @@ const Infrastructure = () => {
         {/* Image Grid */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {visibleImages.map((image, index) => (
-            <LazyLoad
+            <div
               key={index}
-              height={300}
-              offset={150}
-              once
-              placeholder={<div className="bg-gray-300 h-full w-full"></div>}
+              className={`relative rounded-lg overflow-hidden shadow-lg bg-white h-96 transition-all duration-300 ${
+                hoveredIndex !== null && hoveredIndex !== index ? "blur-sm" : ""
+              }`}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div
-                className={`relative rounded-lg overflow-hidden shadow-lg bg-white h-96 transition-all duration-300 ${
-                  hoveredIndex !== null && hoveredIndex !== index
-                    ? "blur-sm"
-                    : ""
+              <LazyLoadImage
+                src={image}
+                alt={`Image ${index + 1}`}
+                wrapperClassName="h-full w-full"
+                className={`w-full h-full object-cover transition-transform duration-300 ${
+                  hoveredIndex === index ? "scale-110" : ""
                 }`}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                <img
-                  src={image}
-                  alt={`Image ${index + 1}`}
-                  className={`w-full h-full object-cover transition-transform duration-300 ${
-                    hoveredIndex === index ? "scale-110" : ""
-                  }`}
-                />
-              </div>
-            </LazyLoad>
+              />
+            </div>
           ))}
         </div>
 
