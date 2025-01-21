@@ -22,7 +22,40 @@ import eventThree4 from "@/assets/events/10Sept2024/img4.jpg";
 import eventThree5 from "@/assets/events/10Sept2024/img5.jpg";
 import eventThree6 from "@/assets/events/10Sept2024/img6.jpg";
 import eventThree7 from "@/assets/events/10Sept2024/img7.jpg";
-
+import eventFour1 from "@/assets/events/8Spet2024/img1.jpg";
+import eventFour2 from "@/assets/events/8Spet2024/img2.jpg";
+import eventFour3 from "@/assets/events/8Spet2024/img3.jpg";
+import eventFour4 from "@/assets/events/8Spet2024/img4.jpg";
+import eventFive1 from "@/assets/events/5Spet2024/img1.jpg";
+import eventFive2 from "@/assets/events/5Spet2024/img2.jpg";
+import eventFive3 from "@/assets/events/5Spet2024/img3.jpg";
+import eventFive4 from "@/assets/events/5Spet2024/img4.jpg";
+import eventFive5 from "@/assets/events/5Spet2024/img5.jpg";
+import eventFive6 from "@/assets/events/5Spet2024/img6.jpg";
+import eventFive7 from "@/assets/events/5Spet2024/img7.jpg";
+import eventFive8 from "@/assets/events/5Spet2024/img8.jpg";
+import eventSix1 from "@/assets/events/29Aug2024/img1.jpg";
+import eventSix2 from "@/assets/events/29Aug2024/img2.jpg";
+import eventSix3 from "@/assets/events/29Aug2024/img3.jpg";
+import eventSix4 from "@/assets/events/29Aug2024/img4.jpg";
+import eventSeven1 from "@/assets/events/29Aug2024_2/img1.jpg";
+import eventSeven2 from "@/assets/events/29Aug2024_2/img2.jpg";
+import eventSeven3 from "@/assets/events/29Aug2024_2/img3.jpg";
+import eventSeven4 from "@/assets/events/29Aug2024_2/img4.jpg";
+import eventSeven5 from "@/assets/events/29Aug2024_2/img5.jpg";
+import eventEight1 from "@/assets/events/28Aug2024/img1.jpg";
+import eventEight2 from "@/assets/events/28Aug2024/img2.jpg";
+import eventEight3 from "@/assets/events/28Aug2024/img3.jpg";
+import eventEight4 from "@/assets/events/28Aug2024/img4.jpg";
+import eventEight5 from "@/assets/events/28Aug2024/img5.jpg";
+import eventEight6 from "@/assets/events/28Aug2024/img6.jpg";
+import eventEight7 from "@/assets/events/28Aug2024/img7.jpg";
+import eventNine1 from "@/assets/events/15Aug2024/img1.jpg";
+import eventNine2 from "@/assets/events/15Aug2024/img2.jpg";
+import eventNine3 from "@/assets/events/15Aug2024/img3.jpg";
+import eventNine4 from "@/assets/events/15Aug2024/img4.jpg";
+import eventNine5 from "@/assets/events/15Aug2024/img5.jpg";
+import eventNine6 from "@/assets/events/15Aug2024/img6.jpg";
 const events = [
   {
     id: 1,
@@ -52,54 +85,62 @@ const events = [
   },
   {
     id: 4,
-    name: "STORY ENACTMENT KINDERGARTEN 16 Sept 2024",
-    thumbnail: eventOne4,
-    images: [eventOne1, eventOne2, eventOne3, eventOne4],
+    name: "TOY DONATION-PRABH AASRA 8 Sept 2024",
+    thumbnail: eventFour1,
+    images: [eventFour1, eventFour2, eventFour3, eventFour4],
   },
   {
     id: 5,
-    name: "CBSE Cluster Games 13 Sept 2024",
-    thumbnail: eventTwo2,
-    images: [eventTwo1, eventTwo2, eventTwo3],
-  },
-  {
-    id: 6,
-    name: "MEET THE COMMUNITY HELPERS 10 Sept 2024",
-    thumbnail: eventThree1,
+    name: "Teacher's Day Celebration 5 Sept 2024",
+    thumbnail: eventFive7,
     images: [
-      eventThree1,
-      eventThree2,
-      eventThree3,
-      eventThree4,
-      eventThree5,
-      eventThree6,
-      eventThree7,
+      eventFive1,
+      eventFive2,
+      eventFive3,
+      eventFive4,
+      eventFive5,
+      eventFive6,
+      eventFive7,
+      eventFive8,
     ],
   },
   {
+    id: 6,
+    name: "National Sports Day 29 Aug 2024",
+    thumbnail: eventSix1,
+    images: [eventSix1, eventSix2, eventSix3, eventSix4],
+  },
+  {
     id: 7,
-    name: "STORY ENACTMENT KINDERGARTEN 16 Sept 2024",
-    thumbnail: eventOne4,
-    images: [eventOne1, eventOne2, eventOne3, eventOne4],
+    name: "Mini Marathon 29 Aug 2024",
+    thumbnail: eventSeven5,
+    images: [eventSeven1, eventSeven2, eventSeven3, eventSeven4, eventSeven5],
   },
   {
     id: 8,
-    name: "CBSE Cluster Games 13 Sept 2024",
-    thumbnail: eventTwo2,
-    images: [eventTwo1, eventTwo2, eventTwo3],
+    name: "Krishna Janmashtami Festival 28 Aug 2024",
+    thumbnail: eventEight3,
+    images: [
+      eventEight1,
+      eventEight2,
+      eventEight3,
+      eventEight4,
+      eventEight5,
+      eventEight6,
+      eventEight7,
+    ],
   },
   {
     id: 9,
-    name: "MEET THE COMMUNITY HELPERS 10 Sept 2024",
-    thumbnail: eventThree1,
+    name: "Independence Day Celebration 15 Aug 2024",
+    thumbnail: eventNine5,
     images: [
-      eventThree1,
-      eventThree2,
-      eventThree3,
-      eventThree4,
-      eventThree5,
-      eventThree6,
-      eventThree7,
+      eventNine1,
+      eventNine2,
+      eventNine3,
+      eventNine4,
+      eventNine5,
+      eventNine6,
     ],
   },
   // Additional events as required
