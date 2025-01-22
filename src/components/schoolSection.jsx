@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 import WordPullUp from "../components/ui/word-pull-up";
 import WordFadeIn from "../components/ui/word-fade-in";
 import { useNavigate } from "react-router-dom";
-import prePrimary from "@/assets/images/webp/pre-primary.webp";
-import primary from "@/assets/images/webp/primary.webp";
-import middle from "@/assets/images/webp/middle.webp";
-import highschool from "@/assets/images/webp/highschool.webp";
-import seniorSecondarySchool from "@/assets/images/webp/seniorSecondarySchool.webp";
+import prePrimary from "@/assets/bfis_images/pre-primary.webp";
+import primary from "@/assets/bfis_images/primary.webp";
+import middle from "@/assets/bfis_images/middle.webp";
+import highschool from "@/assets/bfis_images/high.webp";
+import seniorSecondarySchool from "@/assets/bfis_images/senior.webp";
 import smart from "../assets/images/jpg/gallery10.jpg";
 
 const sections = [
   {
     id: "pre-primary",
     title: "PRE-PRIMARY",
-    subtitle: "Ages 2+ - 5",
+    subtitle: "Ages 3-5",
     image: prePrimary,
     description:
       "Our pre-primary program focuses on early childhood development through play-based learning, fostering curiosity and social skills in a nurturing environment.",

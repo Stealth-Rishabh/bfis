@@ -9,11 +9,11 @@ import WordPullUp from "@/components/ui/word-pull-up";
 import WordFadeIn from "@/components/ui/word-fade-in";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
-import prePrimary from "@/assets/images/webp/pre-primary.webp";
-import primary from "@/assets/images/webp/primary.webp";
-import middle from "@/assets/images/webp/middle.webp";
-import highschool from "@/assets/images/webp/highschool.webp";
-import seniorSecondarySchool from "@/assets/images/webp/seniorSecondarySchool.webp";
+import prePrimary from "@/assets/bfis_images/pre-primary.webp";
+import primary from "@/assets/bfis_images/primary.webp";
+import middle from "@/assets/bfis_images/middle.webp";
+import highschool from "@/assets/bfis_images/high.webp";
+import seniorSecondarySchool from "@/assets/bfis_images/senior.webp";
 import smart from "@/assets/images/webp/smartl.webp";
 import banner from "@/assets/images/webp/primaryBanner.webp";
 
@@ -21,7 +21,7 @@ const sections = [
   {
     id: "pre-primary",
     title: "Pre-Primary School",
-    description: `The first chapter of your child's education at Brookfield begins here and includes children aged between 2+ - 5 years. During these formative years, a carefully integrated programme of learning is provided which covers seven key areas.`,
+    description: `The first chapter of your child's education at Brookfield begins here and includes children aged between 3-5 years. During these formative years, a carefully integrated programme of learning is provided which covers seven key areas.`,
     highlights: [
       "Personal, Social and Emotional Development",
       "Communication and Language",
@@ -41,9 +41,12 @@ const sections = [
     highlights: [
       "English",
       "Hindi",
-      "Punjabi",
+      "Sanskrit",
       "Social Studies",
       "General Science",
+      "Physics",
+      "Chemistry",
+      "and more..",
     ],
     image: primary,
     sticky: true,
