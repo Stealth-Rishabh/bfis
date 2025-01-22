@@ -56,6 +56,82 @@ import eventNine3 from "@/assets/events/15Aug2024/img3.jpg";
 import eventNine4 from "@/assets/events/15Aug2024/img4.jpg";
 import eventNine5 from "@/assets/events/15Aug2024/img5.jpg";
 import eventNine6 from "@/assets/events/15Aug2024/img6.jpg";
+import eventTen1 from "@/assets/events/10Aug2024/img1.jpg";
+import eventTen2 from "@/assets/events/10Aug2024/img2.jpg";
+import eventTen3 from "@/assets/events/10Aug2024/img3.jpg";
+import eventTen4 from "@/assets/events/10Aug2024/img4.jpg";
+import eventEleven1 from "@/assets/events/2Aug2024/img1.jpg";
+import eventEleven2 from "@/assets/events/2Aug2024/img2.jpg";
+import eventEleven3 from "@/assets/events/2Aug2024/img3.jpg";
+import eventEleven4 from "@/assets/events/2Aug2024/img4.jpg";
+import eventTwelve1 from "@/assets/events/30Jul2024/img1.jpg";
+import eventTwelve2 from "@/assets/events/30Jul2024/img2.jpg";
+import eventTwelve3 from "@/assets/events/30Jul2024/img3.jpg";
+import eventTwelve4 from "@/assets/events/30Jul2024/img4.jpg";
+import eventTwelve5 from "@/assets/events/30Jul2024/img5.jpg";
+import eventThirteen1 from "@/assets/events/29Jul2024/img1.jpg";
+import eventThirteen2 from "@/assets/events/29Jul2024/img2.jpg";
+import eventThirteen3 from "@/assets/events/29Jul2024/img3.jpg";
+import eventThirteen4 from "@/assets/events/29Jul2024/img4.jpg";
+import eventFourteen1 from "@/assets/events/29July2024/img1.jpg";
+import eventFourteen2 from "@/assets/events/29July2024/img2.jpg";
+import eventFourteen3 from "@/assets/events/29July2024/img3.jpg";
+import eventFourteen4 from "@/assets/events/29July2024/img4.jpg";
+import eventFifteen1 from "@/assets/events/26Jul2024/img1.jpg";
+import eventFifteen2 from "@/assets/events/26Jul2024/img2.jpg";
+import eventFifteen3 from "@/assets/events/26Jul2024/img3.jpg";
+import eventFifteen4 from "@/assets/events/26Jul2024/img4.jpg";
+import eventSixteen1 from "@/assets/events/24Jul2024/img1.jpg";
+import eventSixteen2 from "@/assets/events/24Jul2024/img2.jpg";
+import eventSixteen3 from "@/assets/events/24Jul2024/img3.jpg";
+import eventSixteen4 from "@/assets/events/24Jul2024/img4.jpg";
+import eventSeventeen1 from "@/assets/events/19Jul2024/img1.jpg";
+import eventSeventeen2 from "@/assets/events/19Jul2024/img2.jpg";
+import eventSeventeen3 from "@/assets/events/19Jul2024/img3.jpg";
+import eventSeventeen4 from "@/assets/events/19Jul2024/img4.jpg";
+import eventEighteen1 from "@/assets/events/9Jul2024/img1.jpg";
+import eventEighteen2 from "@/assets/events/9Jul2024/img2.jpg";
+import eventEighteen3 from "@/assets/events/9Jul2024/img3.jpg";
+import eventNineteen1 from "@/assets/events/8Jul2024/img1.jpg";
+import eventNineteen2 from "@/assets/events/8Jul2024/img2.jpg";
+import eventNineteen3 from "@/assets/events/8Jul2024/img3.jpg";
+import eventNineteen4 from "@/assets/events/8Jul2024/img4.jpg";
+import eventNineteen5 from "@/assets/events/8Jul2024/img5.jpg";
+import eventTwenty1 from "@/assets/events/5Jul2024/img1.jpg";
+import eventTwenty2 from "@/assets/events/5Jul2024/img2.jpg";
+import eventTwenty3 from "@/assets/events/5Jul2024/img3.jpg";
+import eventTwenty4 from "@/assets/events/5Jul2024/img4.jpg";
+import eventTwenty5 from "@/assets/events/5Jul2024/img5.jpg";
+import eventTwentyOne1 from "@/assets/events/27Jun2024/img1.jpg";
+import eventTwentyOne2 from "@/assets/events/27Jun2024/img2.jpg";
+import eventTwentyOne3 from "@/assets/events/27Jun2024/img3.jpg";
+import eventTwentyOne4 from "@/assets/events/27Jun2024/img4.jpg";
+import eventTwentyOne5 from "@/assets/events/27Jun2024/img5.jpg";
+import eventTwentyTwo1 from "@/assets/events/21Jun2024/img1.jpg";
+import eventTwentyTwo2 from "@/assets/events/21Jun2024/img2.jpg";
+import eventTwentyTwo3 from "@/assets/events/21Jun2024/img3.jpg";
+import eventTwentyTwo4 from "@/assets/events/21Jun2024/img4.jpg";
+import eventTwentyTwo5 from "@/assets/events/21Jun2024/img5.jpg";
+import eventTwentyThree1 from "@/assets/events/3Jun2024/img1.jpg";
+import eventTwentyThree2 from "@/assets/events/3Jun2024/img2.jpg";
+import eventTwentyThree3 from "@/assets/events/3Jun2024/img3.jpg";
+import eventTwentyThree4 from "@/assets/events/3Jun2024/img4.jpg";
+import eventTwentyFour1 from "@/assets/events/20May2024/img1.jpg";
+import eventTwentyFour2 from "@/assets/events/20May2024/img2.jpg";
+import eventTwentyFour3 from "@/assets/events/20May2024/img3.jpg";
+import eventTwentyFour4 from "@/assets/events/20May2024/img4.jpg";
+import eventTwentyFour5 from "@/assets/events/20May2024/img5.jpg";
+import eventTwentyFive1 from "@/assets/events/18May2024/img1.jpg";
+import eventTwentyFive2 from "@/assets/events/18May2024/img2.jpg";
+import eventTwentyFive3 from "@/assets/events/18May2024/img3.jpg";
+import eventTwentyFive4 from "@/assets/events/18May2024/img4.jpg";
+import eventTwentyFive5 from "@/assets/events/18May2024/img5.jpg";
+import eventTwentySix1 from "@/assets/events/17May2024/img1.jpg";
+import eventTwentySix2 from "@/assets/events/17May2024/img2.jpg";
+import eventTwentySix3 from "@/assets/events/17May2024/img3.jpg";
+import eventTwentySix4 from "@/assets/events/17May2024/img4.jpg";
+import eventTwentySix5 from "@/assets/events/17May2024/img5.jpg";
+
 const events = [
   {
     id: 1,
@@ -141,6 +217,166 @@ const events = [
       eventNine4,
       eventNine5,
       eventNine6,
+    ],
+  },
+  {
+    id: 10,
+    name: "Blood Donation Camp 10 Aug 2024",
+    thumbnail: eventTen4,
+    images: [eventTen1, eventTen2, eventTen3, eventTen4],
+  },
+  {
+    id: 11,
+    name: "Traffic Awareness Workshop 2 Aug 2024",
+    thumbnail: eventEleven3,
+    images: [eventEleven1, eventEleven2, eventEleven3, eventEleven4],
+  },
+  {
+    id: 12,
+    name: "Environment Awareness 30 July 2024",
+    thumbnail: eventTwelve2,
+    images: [
+      eventTwelve1,
+      eventTwelve2,
+      eventTwelve3,
+      eventTwelve4,
+      eventTwelve5,
+    ],
+  },
+  {
+    id: 13,
+    name: "Plantation Drive 29 July 2024",
+    thumbnail: eventThirteen3,
+    images: [eventThirteen1, eventThirteen2, eventThirteen3, eventThirteen4],
+  },
+  {
+    id: 14,
+    name: "International Tiger Day 29 July 2024",
+    thumbnail: eventFourteen4,
+    images: [eventFourteen1, eventFourteen2, eventFourteen3, eventFourteen4],
+  },
+  {
+    id: 15,
+    name: "Educational Trip Traffic Park Visit 26 Jul 2024",
+    thumbnail: eventFifteen4,
+    images: [eventFifteen1, eventFifteen2, eventFifteen3, eventFifteen4],
+  },
+  {
+    id: 16,
+    name: "Medical Camp organized by Homi Bhabha Cancer and Research Centre 24 July 2024",
+    thumbnail: eventSixteen4,
+    images: [eventSixteen1, eventSixteen2, eventSixteen3, eventSixteen4],
+  },
+  {
+    id: 17,
+    name: "Monsoon Mania 19 July 2024",
+    thumbnail: eventSeventeen1,
+    images: [
+      eventSeventeen1,
+      eventSeventeen2,
+      eventSeventeen3,
+      eventSeventeen4,
+    ],
+  },
+  {
+    id: 18,
+    name: "Seminar on Cancer Awareness 9 July 2024",
+    thumbnail: eventEighteen2,
+    images: [eventEighteen1, eventEighteen2, eventEighteen3],
+  },
+  {
+    id: 19,
+    name: "Seed Germination 8 July 2024",
+    thumbnail: eventNineteen1,
+    images: [
+      eventNineteen1,
+      eventNineteen2,
+      eventNineteen3,
+      eventNineteen4,
+      eventNineteen5,
+    ],
+  },
+  {
+    id: 20,
+    name: "Investiture Ceremony 5 July 2024",
+    thumbnail: eventTwenty5,
+    images: [
+      eventTwenty1,
+      eventTwenty2,
+      eventTwenty3,
+      eventTwenty4,
+      eventTwenty5,
+    ],
+  },
+  {
+    id: 21,
+    name: "CBSE Workshop 27 Jun 2024",
+    thumbnail: eventTwentyOne1,
+    images: [
+      eventTwentyOne1,
+      eventTwentyOne2,
+      eventTwentyOne3,
+      eventTwentyOne4,
+      eventTwentyOne5,
+    ],
+  },
+  {
+    id: 22,
+    name: "INTERNATIONAL YOGA DAY 21 Jun 2024",
+    thumbnail: eventTwentyTwo5,
+    images: [
+      eventTwentyTwo1,
+      eventTwentyTwo2,
+      eventTwentyTwo3,
+      eventTwentyTwo4,
+      eventTwentyTwo5,
+    ],
+  },
+  {
+    id: 23,
+    name: "GRADE 10-TREKKING & CAMPING 3 Jun 2024",
+    thumbnail: eventTwentyThree1,
+    images: [
+      eventTwentyThree1,
+      eventTwentyThree2,
+      eventTwentyThree3,
+      eventTwentyThree4,
+    ],
+  },
+  {
+    id: 24,
+    name: "DENTAL HYGIENE DRILL 20 May 2024",
+    thumbnail: eventTwentyFour5,
+    images: [
+      eventTwentyFour1,
+      eventTwentyFour2,
+      eventTwentyFour3,
+      eventTwentyFour4,
+      eventTwentyFour5,
+    ],
+  },
+  {
+    id: 25,
+    name: "Teachers Workshop 18 May 2024",
+    thumbnail: eventTwentyFive4,
+    images: [
+      eventTwentyFive1,
+      eventTwentyFive2,
+      eventTwentyFive3,
+      eventTwentyFive4,
+      eventTwentyFive5,
+    ],
+  },
+  {
+    id: 26,
+    name: "CURIOSITY KIDS KINDERGARTEN 17 May 2024",
+    thumbnail: eventTwentySix5,
+    images: [
+      eventTwentySix1,
+      eventTwentySix2,
+      eventTwentySix3,
+      eventTwentySix4,
+      eventTwentySix5,
     ],
   },
   // Additional events as required
